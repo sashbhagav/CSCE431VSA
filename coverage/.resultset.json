@@ -1,0 +1,424 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/helpers/application_helper.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/helpers/events_helper.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/helpers/households_helper.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/models/event.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/models/application_record.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/controllers/events_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          9,
+          9,
+          1,
+          null,
+          8,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          3,
+          null,
+          null
+        ]
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/controllers/member_view_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          8,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/controllers/login_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          2,
+          null,
+          2,
+          2,
+          null,
+          null,
+          null,
+          2,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/models/household.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/controllers/households_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          9,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          2,
+          1,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          2,
+          1,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          2,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          6,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/models/login_attempt.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/mailers/application_mailer.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/models/rail.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/models/backup.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/jobs/application_job.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/channels/application_cable/connection.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/app/channels/application_cable/channel.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1614576724
+  }
+}
