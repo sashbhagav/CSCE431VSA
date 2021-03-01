@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  generate: MyString
+  model: MyString
+  households: MyString
+  first: MyString
+  last: MyString
+  UIN: MyString
+  family: MyString
+  email: MyString
+  phonenumber: MyString
+  classification: MyString
+  major: MyString
+
+two:
+  generate: MyString
+  model: MyString
+  households: MyString
+  first: MyString
+  last: MyString
+  UIN: MyString
+  family: MyString
+  email: MyString
+  phonenumber: MyString
+  classification: MyString
+  major: MyString

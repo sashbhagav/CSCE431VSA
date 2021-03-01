@@ -1,0 +1,18 @@
+<%= link_to("<< Back to Home", events_path, :class => 'back-link') %>
+<%= image_tag ("vsa.png") %>
+<div class="book show">
+  <h2>Details about '<%= @event.name %>'</h2>
+
+  <table summary="book detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @event.name %></td>
+    </tr>
+    <tr>
+      <th>Decscription</th>
+      <td><%= @event.description %></td>
+    </tr>
+
+  </table>
+
+</div>

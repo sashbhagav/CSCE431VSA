@@ -1,0 +1,12 @@
+
+<h1><%= link_to 'Continue as a club member', "/member_view/index" %></h1>
+
+
+
+<h1>Admin Login</h1>
+
+<%= form_for(:LoginAttempt) do |f| %>
+  username: <%= f.text_field (:username) %><br />
+  password: <%= f.text_field (:password) %><br />
+  <%= f.submit 'submit'%>
+<% end %>

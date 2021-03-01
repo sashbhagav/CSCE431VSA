@@ -1,0 +1,41 @@
+<div class= "events index">
+  <%= image_tag ("vsa.png") %>
+  <h2>VSA Events</h2>
+  <p>View all the events in our club</p>
+  <table class="listing" summary="events list">
+    <tr class="header">
+      <th>Events</th>
+      <th>Description</th>
+
+    </tr>
+    <% @events.each do |event| %>
+    <tr>
+      <td><%= event.name %></td>
+      <td><%= event.description %></td>
+        <td class="actions">
+        <%= link_to("Details", event_path(event), :class => 'action show') %>
+        <%= link_to("Update", edit_event_path(event), :class => 'action edit') %>
+        <%= link_to("Delete", delete_event_path(event), :class => 'action delete') %>
+      </td>
+    </tr>
+
+
+    <% end %>
+  </table>
+  </br>
+    <div class = "form-buttons">
+      <%= button_to("Logout", { :action => "logout" }, :method => :get, :class => 'login new') %>
+  </div>
+
+    <div class = "form-buttons">
+        <%= button_to("Add a new event", { :action => "new" }, :method => :get, :class => 'action new') %>
+    </div>
+      <div class = "form-buttons">
+        <%= button_to("Add a new household", households_path, :method => :get) %>
+    </div>
+
+
+    <% flash.each do |key, value| %>
+      <td><%= value%> </td>
+    <%end%>
+</div>

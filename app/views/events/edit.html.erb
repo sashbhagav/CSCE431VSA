@@ -1,0 +1,22 @@
+<%= link_to("<< Back to Home", events_path, :class => 'back-link') %>
+<%= image_tag ("vsa.png") %>
+<div class="event show">
+  <h2>Update Event </h2>
+
+<%= form_for(@event) do |e| %>
+  <table summary="book form">
+    <tr>
+      <th>Title</th>
+      <td><%= e.text_field(:name) %></td>
+    </tr>
+    <tr>
+      <th>Author</th>
+      <td><%= e.text_field(:description) %></td>
+    </tr>
+
+
+  <div class = "form-buttons">
+    <%= e.submit("Update Event")%>
+    </div>
+<% end %>
+</div>

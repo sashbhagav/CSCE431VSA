@@ -1,0 +1,16 @@
+<%= link_to("<< Back to Home", events_path, :class => 'back-link') %>
+<%= image_tag ("vsa.png") %>
+<div class="events delete">
+  <h2>Delete event</h2>
+
+  <%= form_for(@event, :method => 'delete') do |f| %>
+
+
+    <p>You sure you want to delete the event?</p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete event") %>
+    </div>
+
+  <% end %>
+</div>
