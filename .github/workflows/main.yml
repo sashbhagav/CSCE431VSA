@@ -1,9 +1,9 @@
 name: CICD
 on: 
   push:
-    branches: [ VM-26-CI-CD ]
+    branches: [ master ]
   pull_request:
-    branches: [ VM-26-CI-CD ]
+    branches: [ master ]
 jobs:
   test:
     runs-on: ubuntu-latest
