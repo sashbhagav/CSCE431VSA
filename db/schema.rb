@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(version: 20_210_225_032_812) do
   create_table 'event', force: :cascade do |t|
     t.string 'name'
     t.string 'description'
+    t.string 'location'
+    t.string 'time'
+    t.string 'points'
     t.float 'event_id'
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
@@ -34,6 +37,9 @@ ActiveRecord::Schema.define(version: 20_210_225_032_812) do
   create_table 'events', force: :cascade do |t|
     t.string 'name'
     t.string 'description'
+    t.string 'location'
+    t.string 'time'
+    t.string 'points'
     t.float 'event_id'
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false

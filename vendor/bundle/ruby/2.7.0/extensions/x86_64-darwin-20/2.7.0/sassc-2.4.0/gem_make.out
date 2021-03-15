@@ -1,11 +1,11 @@
-current directory: /Users/sashreek/Documents/CSCE431/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
-/Users/sashreek/.rvm/rubies/ruby-2.7.1/bin/ruby -I /Users/sashreek/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20210226-11036-169rdqe.rb extconf.rb
+current directory: /Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
+/Users/sashreek/.rvm/rubies/ruby-2.7.2/bin/ruby -I /Users/sashreek/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20210311-13088-yo7k4x.rb extconf.rb
 creating Makefile
 
-current directory: /Users/sashreek/Documents/CSCE431/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
+current directory: /Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
 make "DESTDIR=" clean
 
-current directory: /Users/sashreek/Documents/CSCE431/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
+current directory: /Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
 make "DESTDIR="
 compiling ./libsass/src/ast.cpp
 compiling ./libsass/src/ast2c.cpp
@@ -75,6 +75,6 @@ compiling ./libsass/src/util_string.cpp
 compiling ./libsass/src/values.cpp
 linking shared-object sassc/libsass.bundle
 
-current directory: /Users/sashreek/Documents/CSCE431/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
+current directory: /Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 libsass.bundle ./.gem.20210226-11036-qxkcjj/sassc
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 libsass.bundle ./.gem.20210311-13088-jj7ir0/sassc

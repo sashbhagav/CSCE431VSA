@@ -3,9 +3,15 @@
 one:
   name: MyString
   description: MyString
+  location: MyString
+  time: MyString
+  points: MyString
   event_id: 1.5
 
 two:
   name: MyString
   description: MyString
+  location: MyString
+  time: MyString
+  points: MyString
   event_id: 1.5

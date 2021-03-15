@@ -1,5 +1,5 @@
-current directory: /Users/sashreek/Documents/CSCE431/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.5/ext/nio4r
-/Users/sashreek/.rvm/rubies/ruby-2.7.1/bin/ruby -I /Users/sashreek/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20210226-11036-1b72s1f.rb extconf.rb
+current directory: /Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.5/ext/nio4r
+/Users/sashreek/.rvm/rubies/ruby-2.7.2/bin/ruby -I /Users/sashreek/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20210311-13088-3ewdn3.rb extconf.rb
 checking for unistd.h... yes
 checking for linux/aio_abi.h... no
 checking for linux/io_uring.h... no
@@ -12,10 +12,10 @@ checking for port_event_t in port.h... no
 checking for sys/resource.h... yes
 creating Makefile
 
-current directory: /Users/sashreek/Documents/CSCE431/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.5/ext/nio4r
+current directory: /Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.5/ext/nio4r
 make "DESTDIR=" clean
 
-current directory: /Users/sashreek/Documents/CSCE431/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.5/ext/nio4r
+current directory: /Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.5/ext/nio4r
 make "DESTDIR="
 compiling bytebuffer.c
 compiling monitor.c
@@ -92,12 +92,12 @@ compiling selector.c
 selector.c:301:26: warning: incompatible function pointer types passing 'VALUE (*)(VALUE *)' (aka 'unsigned long (*)(unsigned long *)') to parameter of type 'VALUE (*)(VALUE)' (aka 'unsigned long (*)(unsigned long)') [-Wincompatible-function-pointer-types]
         return rb_ensure(func, (VALUE)args, NIO_Selector_unlock, self);
                          ^~~~
-/Users/sashreek/.rvm/rubies/ruby-2.7.1/include/ruby-2.7.0/ruby/ruby.h:1990:24: note: passing argument to parameter here
+/Users/sashreek/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/ruby.h:1990:24: note: passing argument to parameter here
 VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
                        ^
 1 warning generated.
 linking shared-object nio4r_ext.bundle
 
-current directory: /Users/sashreek/Documents/CSCE431/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.5/ext/nio4r
+current directory: /Users/sashreek/Documents/SoftwareEngineering/CSCE/CSCE431Project/vsamemberstracker/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.5/ext/nio4r
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 nio4r_ext.bundle ./.gem.20210226-11036-fy7g90
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 nio4r_ext.bundle ./.gem.20210311-13088-1tijx9r
