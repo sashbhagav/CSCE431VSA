@@ -1,0 +1,57 @@
+<%= form_with(model: household) do |form| %>
+  <% if household.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(household.errors.count, "error") %> prohibited this household from being saved:</h2>
+
+      <ul>
+        <% household.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :first %>
+    <%= form.text_field :first %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last %>
+    <%= form.text_field :last %>
+  </div>
+
+  <div class="field">
+    <%= form.label :UIN %>
+    <%= form.text_field :UIN %>
+  </div>
+
+  <div class="field">
+    <%= form.label :family %>
+    <%= form.text_field :family %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phonenumber %>
+    <%= form.text_field :phonenumber %>
+  </div>
+
+  <div class="field">
+    <%= form.label :classification %>
+    <%= form.text_field :classification %>
+  </div>
+
+  <div class="field">
+    <%= form.label :major %>
+    <%= form.text_field :major %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

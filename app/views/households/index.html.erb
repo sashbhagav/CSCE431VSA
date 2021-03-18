@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Households</h1>
+
+<div>
+  <div>
+    <table role="datatable">
+      <thead>
+        <tr>
+          <th>First</th>
+          <th>Last</th>
+          <th>Uin</th>
+          <th>Family</th>
+          <th>Email</th>
+          <th>Phonenumber</th>
+          <th>Classification</th>
+          <th>Major</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @households.each do |household| %>
+          <tr>
+            <td><%= household.first %></td>
+            <td><%= household.last %></td>
+            <td><%= household.UIN %></td>
+            <td><%= household.family %></td>
+            <td><%= household.email %></td>
+            <td><%= household.phonenumber %></td>
+            <td><%= household.classification %></td>
+            <td><%= household.major %></td>
+            <td><%= link_to 'Show', household %></td>
+            <td><%= link_to 'Edit', edit_household_path(household) %></td>
+            <td><%= link_to 'Destroy', delete_household_path(household) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<br>
+<h3>Import household</h3>
+<%= form_tag import_households_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload Households"%>
+<% end %>
+<%= link_to 'New Household', new_household_path %>

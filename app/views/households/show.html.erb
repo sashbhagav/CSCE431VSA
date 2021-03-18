@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @household.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @household.last %>
+</p>
+
+<p>
+  <strong>Uin:</strong>
+  <%= @household.UIN %>
+</p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @household.family %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @household.email %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @household.phonenumber %>
+</p>
+
+<p>
+  <strong>Classification:</strong>
+  <%= @household.classification %>
+</p>
+
+<p>
+  <strong>Major:</strong>
+  <%= @household.major %>
+</p>
+
+<%= link_to 'Edit', edit_household_path(@household) %> |
+<%= link_to 'Back', households_path %>
