@@ -2,7 +2,7 @@ require 'rails_helper'
     
 RSpec.describe 'Deleting an event', type: :feature do
     scenario 'success' do
-        event = Event.create!(name: 'Test Event', description: 'Test description')
+        event = Event.create!(name: 'Test Event', description: 'Test description', location: 'Houston', time: '3:30 PM', points: '10')
         visit events_path
         expect(page).to have_content('Test Event')
         visit delete_event_path(id: event.id)
