@@ -1,6 +1,17 @@
+
 <head>
   <%= javascript_include_tag 'application' %>
 </head>
+<style type="text/css">
+  body {background-image: url(/assets/EventView.png); background-size:1920px 950px;}
+  .events_index{padding-left: 80px; text-align:center}
+  .listing{padding-left: 685px}
+</style>
+<br />
+<div class = "form-buttons" text-align = "right">
+  <%= button_to("Administrator Login", { :action => "login" }, :method => :get, :class => 'login new') %>
+</div>
+<body>
 <div class= "events index">
   <%= image_tag ("vsa.png") %>
   <h2>VSA Events</h2>
@@ -68,11 +79,5 @@
     <div class = "form-buttons">
       <%= button_to("Administrator Login", { :action => "login" }, :method => :get, :class => 'login new') %>
   </div>
+</body>
 
-
-
-
-    <% flash.each do |key, value| %>
-      <td><%= value%> </td>
-    <%end%>
-</div>
