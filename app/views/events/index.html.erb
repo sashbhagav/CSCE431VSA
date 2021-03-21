@@ -1,47 +1,114 @@
-<div class= "events index">
-  <%= image_tag ("vsa.png") %>
-  <h2>VSA Events</h2>
-  <p>View all the events in our club</p>
-  <table class="listing" summary="events list">
-    <tr class="header">
-      <th>Events</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th>Time</th>
-      <th>Points</th>
 
-    </tr>
-    <% @events.each do |event| %>
-    <tr>
-      <td><%= event.name %></td>
-      <td><%= event.description %></td>
-      <td><%= event.location %></td>
-      <td><%= event.time %></td>
-      <td><%= event.points %></td>
-        <td class="actions">
-        <%= link_to("Details", event_path(event), :class => 'action show') %>
-        <%= link_to("Update", edit_event_path(event), :class => 'action edit') %>
-        <%= link_to("Delete", delete_event_path(event), :class => 'action delete') %>
-      </td>
-    </tr>
+<head>
+  <%= javascript_include_tag 'application' %>
+</head>
+
+
+<style type="text/css">
+  
+  body {background-image: url(/assets/EventView.png); background-size:1920px 950px;}
+  .events_index{padding-left: 85px; text-align:center}
+  .listing{padding-left: 725px}
+  .EventsButtons{padding-left: 75px; text-align:center}
+</style>
+
+
+<body>
+  <div class= "events_index">
+    <%= image_tag ("vsa.png") %>
+    <h2>VSA Events    </h2>
+    <p>View all the events in our club</p>
+  </div>
+  
+    <table class="listing" summary="events list">
+      <tr class="header">
+        <th>Events</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>Time</th>
+        <th>Points</th>
+
+      </tr>
+      <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.description %></td>
+        <td><%= event.location %></td>
+        <td><%= event.time %></td>
+        <td><%= event.points %></td>
+          <td class="actions">
+          <%= link_to("Details", event_path(event), :class => 'action show') %>
+          <%= link_to("Update", edit_event_path(event), :class => 'action edit') %>
+          <%= link_to("Delete", delete_event_path(event), :class => 'action delete') %>
+        </td>
+      </tr>
 
 
     <% end %>
-  </table>
+    </table>
+</div>
+
+<br>
+<br>
+<h2>VSA Points</h2>
+<div class="media">
+  <div class="media-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>First</th>
+          <th>Last</th>
+          <th>Family</th>
+          <th>Points</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @households.each do |household| %>
+          <tr>
+            <td><%= household.first %></td>
+            <td><%= household.last %></td>
+            <td><%= household.family %></td>
+            <td><%= household.points %></td>
+            <td><%= link_to 'Show', household %></td>
+            <td><%= link_to 'Edit', edit_household_path(household) %></td>
+            <td><%= link_to 'Destroy', household, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<%= pie_chart Household.group(:family).sum(:points) %>
   </br>
     <div class = "form-buttons">
       <%= button_to("Logout", { :action => "logout" }, :method => :get, :class => 'login new') %>
   </div>
 
-    <div class = "form-buttons">
+
+      <% end %>
+    </table>
+    <br />
+
+    <div class="EventsButtons">
+      <div class = "form-buttons">
+        <%= button_to("Logout", { :action => "logout" }, :method => :get, :class => 'login new') %>
+      </div>
+      <div class = "form-buttons">
         <%= button_to("Add a new event", { :action => "new" }, :method => :get, :class => 'action new') %>
-    </div>
+      </div>
       <div class = "form-buttons">
         <%= button_to("Add a new household", households_path, :method => :get) %>
-    </div>
+      </div>
+      <% flash.each do |key, value| %>
+        <td><%= value%> </td>
+      <%end%>
+  </div>
+</body>
 
 
     <% flash.each do |key, value| %>
       <td><%= value%> </td>
     <%end%>
-</div>
+

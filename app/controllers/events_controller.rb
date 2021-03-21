@@ -6,6 +6,7 @@ class EventsController < ApplicationController
 
 
   def index
+    @households = Household.all
     @events = Event.order('name ASC')
     if($adminBOOLEAN == 1)
         render('index')
