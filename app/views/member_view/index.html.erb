@@ -1,40 +1,43 @@
-<div class= "events index">
+<style type="text/css">
+  body {background-image: url(/assets/EventView.png); background-size:1920px 950px;}
+  .events_index{padding-left: 80px; text-align:center}
+  .listing{padding-left: 685px}
+</style>
+<br />
+<div class = "form-buttons" text-align = "right">
+  <%= button_to("Administrator Login", { :action => "login" }, :method => :get, :class => 'login new') %>
+</div>
+<body>
+  <div class= "events_index">
   <%= image_tag ("vsa.png") %>
   <h2>VSA Events</h2>
   <p>View all the events in our club CICD test</p>
-  <table class="listing" summary="events list">
-    <tr class="header">
-      <th>Events</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th>Time</th>
-      <th>Points</th>
+    <table class="listing" summary="events list">
+      <tr class="header">
+        <th>Events</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>Time</th>
+        <th>Points</th>
 
-    </tr>
-    <% @events.each do |event| %>
-    <tr>
-      <td><%= event.name %></td>
-      <td><%= event.description %></td>
-      <td><%= event.location %></td>
-      <td><%= event.time %></td>
-      <td><%= event.points %></td>
-        <td class="actions">
-        <%= link_to("Details", event_path(event), :class => 'action show') %>
-      </td>
-    </tr>
-
-
-    <% end %>
-  </table>
-  </br>
-    <div class = "form-buttons">
-      <%= button_to("Administrator Login", { :action => "login" }, :method => :get, :class => 'login new') %>
-  </div>
-
-
-
-
+      </tr>
+      <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.description %></td>
+        <td><%= event.location %></td>
+        <td><%= event.time %></td>
+        <td><%= event.points %></td>
+          <td class="actions">
+          <%= link_to("Details", event_path(event), :class => 'action show') %>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  <br />
     <% flash.each do |key, value| %>
       <td><%= value%> </td>
     <%end%>
-</div>
+  </div>
+</body>
+

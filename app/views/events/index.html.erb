@@ -1,47 +1,59 @@
-<div class= "events index">
-  <%= image_tag ("vsa.png") %>
-  <h2>VSA Events</h2>
-  <p>View all the events in our club</p>
-  <table class="listing" summary="events list">
-    <tr class="header">
-      <th>Events</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th>Time</th>
-      <th>Points</th>
+<style type="text/css">
+  
+  body {background-image: url(/assets/EventView.png); background-size:1920px 950px;}
+  .events_index{padding-left: 85px; text-align:center}
+  .listing{padding-left: 725px}
+  .EventsButtons{padding-left: 75px; text-align:center}
+</style>
 
-    </tr>
-    <% @events.each do |event| %>
-    <tr>
-      <td><%= event.name %></td>
-      <td><%= event.description %></td>
-      <td><%= event.location %></td>
-      <td><%= event.time %></td>
-      <td><%= event.points %></td>
-        <td class="actions">
-        <%= link_to("Details", event_path(event), :class => 'action show') %>
-        <%= link_to("Update", edit_event_path(event), :class => 'action edit') %>
-        <%= link_to("Delete", delete_event_path(event), :class => 'action delete') %>
-      </td>
-    </tr>
-
-
-    <% end %>
-  </table>
-  </br>
-    <div class = "form-buttons">
-      <%= button_to("Logout", { :action => "logout" }, :method => :get, :class => 'login new') %>
+<body>
+  <div class= "events_index">
+    <%= image_tag ("vsa.png") %>
+    <h2>VSA Events</h2>
+    <p>View all the events in our club</p>
   </div>
+  
+    <table class="listing" summary="events list">
+      <tr class="header">
+        <th>Events</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>Time</th>
+        <th>Points</th>
 
-    <div class = "form-buttons">
+      </tr>
+      <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.description %></td>
+        <td><%= event.location %></td>
+        <td><%= event.time %></td>
+        <td><%= event.points %></td>
+          <td class="actions">
+          <%= link_to("Details", event_path(event), :class => 'action show') %>
+          <%= link_to("Update", edit_event_path(event), :class => 'action edit') %>
+          <%= link_to("Delete", delete_event_path(event), :class => 'action delete') %>
+        </td>
+      </tr>
+
+
+      <% end %>
+    </table>
+    <br />
+
+    <div class="EventsButtons">
+      <div class = "form-buttons">
+        <%= button_to("Logout", { :action => "logout" }, :method => :get, :class => 'login new') %>
+      </div>
+      <div class = "form-buttons">
         <%= button_to("Add a new event", { :action => "new" }, :method => :get, :class => 'action new') %>
-    </div>
+      </div>
       <div class = "form-buttons">
         <%= button_to("Add a new household", households_path, :method => :get) %>
-    </div>
+      </div>
+      <% flash.each do |key, value| %>
+        <td><%= value%> </td>
+      <%end%>
+  </div>
+</body>
 
-
-    <% flash.each do |key, value| %>
-      <td><%= value%> </td>
-    <%end%>
-</div>
