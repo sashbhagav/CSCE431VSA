@@ -11,6 +11,7 @@ class CreateHouseholds < ActiveRecord::Migration[6.1]
       t.string :phonenumber
       t.string :classification
       t.string :major
+      t.integer :points
 
       t.timestamps
     end
