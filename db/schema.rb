@@ -22,7 +22,9 @@ ActiveRecord::Schema.define(version: 2021_02_25_032812) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "event", force: :cascade do |t|
+
+  create_table "events", force: :cascade do |t|
+
     t.string "name"
     t.string "description"
     t.string "location"
@@ -33,16 +35,6 @@ ActiveRecord::Schema.define(version: 2021_02_25_032812) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "events", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "location"
-    t.string "time"
-    t.string "points"
-    t.float "event_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "households", force: :cascade do |t|
     t.string "first"
@@ -53,15 +45,20 @@ ActiveRecord::Schema.define(version: 2021_02_25_032812) do
     t.string "phonenumber"
     t.string "classification"
     t.string "major"
+    t.integer "points"
+
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+
   create_table "login_attempts", force: :cascade do |t|
     t.string "username"
     t.string "password"
+
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+
 
 end

@@ -70,6 +70,6 @@ class HouseholdsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def household_params
-    params.require(:household).permit(:first, :last, :UIN, :family, :email, :phonenumber, :classification, :major)
+    params.require(:household).permit(:first, :last, :UIN, :family, :email, :phonenumber, :classification, :major, :points)
   end
 end

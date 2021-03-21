@@ -1,6 +1,7 @@
 class MemberViewController < ApplicationController
   layout false
   def index
+      @households = Household.all
       @events = Event.order('name ASC')
   end
 
