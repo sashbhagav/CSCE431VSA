@@ -1,52 +1,51 @@
-
-<head>
-  <%= javascript_include_tag 'application' %>
-</head>
 <style type="text/css">
   body {background-image: url(/assets/EventView.png); background-size:1920px 950px;}
   .events_index{padding-left: 80px; text-align:center}
   .listing{padding-left: 685px}
+  .Logos{text-align:center; padding-left: 65px; margin: 5px 5px 5px 5px}
+  .media{padding-left: 80px; text-align:center}
+  .table_table_hover{padding-left: 820px}
+  .PieChart{text-align:center}
 </style>
 <br />
 <div class = "form-buttons" text-align = "right">
   <%= button_to("Administrator Login", { :action => "login" }, :method => :get, :class => 'login new') %>
 </div>
 <body>
-<div class= "events index">
+<%= javascript_include_tag 'application' %>
+
+<div class= "events_index">
   <%= image_tag ("vsa.png") %>
   <h2>VSA Events</h2>
   <p>View all the events in our club CICD test Heroku</p>
-  <table class="listing" summary="events list">
-    <tr class="header">
-      <th>Events</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th>Time</th>
-      <th>Points</th>
+    <table class="listing" summary="events list">
+      <tr class="header">
+        <th>Events</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>Time</th>
+        <th>Points</th>
 
-    </tr>
-    <% @events.each do |event| %>
-    <tr>
-      <td><%= event.name %></td>
-      <td><%= event.description %></td>
-      <td><%= event.location %></td>
-      <td><%= event.time %></td>
-      <td><%= event.points %></td>
-        <td class="actions">
-        <%= link_to("Details", event_path(event), :class => 'action show') %>
-      </td>
-    </tr>
-
-
-    <% end %>
-  </table>
+      </tr>
+      <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.description %></td>
+        <td><%= event.location %></td>
+        <td><%= event.time %></td>
+        <td><%= event.points %></td>
+          <td class="actions">
+          <%= link_to("Details", event_path(event), :class => 'action show') %>
+        </td>
+      </tr>
+      <% end %>
+    </table>
   </div>
-  <br>
-  <br>
-  <h2>VSA Points</h2>
+  
   <div class="media">
+  <h2>VSA Points</h2>
     <div class="media-body">
-      <table class="table table-hover">
+      <table class="table_table_hover">
         <thead>
           <tr>
             <th>First</th>
@@ -71,13 +70,19 @@
     </div>
   </div>
 
+  <br />
 
-  <%= pie_chart Household.group(:family).sum(:points) %>
-
-  <div>
-  </br>
-    <div class = "form-buttons">
-      <%= button_to("Administrator Login", { :action => "login" }, :method => :get, :class => 'login new') %>
+  <div class="PieChart">
+    <%= pie_chart Household.group(:family).sum(:points) %>
   </div>
+
+  <div class="Logos">
+    <a href="https://www.facebook.com/groups/vasa.tamu" target="_blank"> <%= image_tag ("FacbookLogo.png") %> </a>
+    <a href="https://www.instagram.com/tamuvsa/" target="_blank"> <%= image_tag ("InstagramLogo.png") %> </a>
+    <a href="https://linktr.ee/tamuvsa" target="_blank"> <%= image_tag ("LinkTreeLogo.png") %> </a>
+  </div>
+
+  <br />
+    
 </body>
 
