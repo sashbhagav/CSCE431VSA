@@ -90,4 +90,4 @@ production:
   <<: *default
   database: vsamemberstracker_production
   username: vsamemberstracker
-  password: <%= ENV['VSAMEMBERSTRACKER_DATABASE_PASSWORD'] %>
+  password: <%= ENV['VSAMEMBERSTRACKER_DATABASE_PASSWORD'] %> 

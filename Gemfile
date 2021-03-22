@@ -38,10 +38,6 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rubocop', require: false
 #brakeman
 gem 'brakeman'
-gem 'rails-assets-jquery', source: 'https://rails-assets.org'
-gem 'rails-assets-datatables', source: 'https://rails-assets.org'
-gem 'kaminari'
-gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'capybara'

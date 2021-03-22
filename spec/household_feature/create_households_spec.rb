@@ -1,5 +1,8 @@
 require 'rails_helper'
 
+# Updating an event
+
+
 RSpec.configure do |config|
   config.include ActionDispatch::TestProcess
 
@@ -7,8 +10,6 @@ RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   describe "POST /subscriber_imports" do
-  let(:file) { { :file => import_households('/files/test1commadelimented.csv', 'text/csv') } }
-  subject { post :create, :subscriber_import => file }
+    let(:file) { { :file => Household.import('/files/test1commadelimented.csv', 'text/csv') } }
   end
-
 end
