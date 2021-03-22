@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'wrong admin login attempt', type: :feature do
   scenario 'success' do
           visit 'login/index'
-          click_on 'submit'
+          click_on 'Submit'
           sleep (2)
           expect(page).to have_content('Admin Login')
       end
@@ -17,7 +17,7 @@ RSpec.describe 'correct admin login attempt', type: :feature do
             fill_in 'LoginAttempt_password', with: 'dog'
           end
 
-          click_on 'submit'
+          click_on 'Submit'
           sleep (5)
           expect(page).to have_content('VSA Events')
       end
