@@ -47,15 +47,17 @@ jobs:
           # bundle exec rails db:prepare
           bundle exec rails db:create
           bundle exec rails db:migrate
+          export selenium_remote_url="https://selenium__standalone-chrome:4444/wd/hub"
           bundle exec rspec .
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.11.10
-        with: 
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-          heroku_email: ${{secrets.HEROKU_LOGIN}}
-          checkstring: 'ok'
+          bundle exec rubocop
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: akhileshns/heroku-deploy@v3.11.10
+  #       with: 
+  #         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+  #         heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+  #         heroku_email: ${{secrets.HEROKU_LOGIN}}
+  #         checkstring: 'ok'
   
