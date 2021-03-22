@@ -1,0 +1,545 @@
+Inspecting 80 files
+C....WCCCCCC..C..C..E..C....CC..C...C..C.........C.CCCCC.WW.CCWCWCWWCC...C......
+
+Offenses:
+
+Gemfile:15:18: C: [Correctable] Style/HashSyntax: Use the new Ruby 1.9 hash syntax.
+gem 'simplecov', :require => false, :group => :test
+                 ^^^^^^^^^^^
+Gemfile:15:37: C: [Correctable] Style/HashSyntax: Use the new Ruby 1.9 hash syntax.
+gem 'simplecov', :require => false, :group => :test
+                                    ^^^^^^^^^
+Gemfile:39:1: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+#brakeman
+^^^^^^^^^
+app/controllers/events_controller.rb:3:1: C: Style/Documentation: Missing top-level class documentation comment.
+class EventsController < ApplicationController
+^^^^^
+app/controllers/events_controller.rb:5:3: C: Style/GlobalVars: Do not introduce global variables.
+  $adminBOOLEAN = 0
+  ^^^^^^^^^^^^^
+app/controllers/events_controller.rb:7:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+app/controllers/events_controller.rb:11:5: C: [Correctable] Layout/SpaceAroundKeyword: Space after keyword if is missing.
+    if($adminBOOLEAN == 1)
+    ^^
+app/controllers/events_controller.rb:11:8: C: Style/GlobalVars: Do not introduce global variables.
+    if($adminBOOLEAN == 1)
+       ^^^^^^^^^^^^^
+app/controllers/events_controller.rb:12:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        render('index')
+    ^^^^
+app/controllers/events_controller.rb:14:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        redirect_to(controller: 'member_view', action: 'index')
+    ^^^^
+app/controllers/events_controller.rb:61:3: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+      $adminBOOLEAN = 0
+  ^^^^
+app/controllers/events_controller.rb:61:7: C: Style/GlobalVars: Do not introduce global variables.
+      $adminBOOLEAN = 0
+      ^^^^^^^^^^^^^
+app/controllers/events_controller.rb:63:5: W: [Correctable] Layout/DefEndAlignment: end at 63, 4 is not aligned with def at 60, 2.
+    end
+    ^^^
+app/controllers/households_controller.rb:3:1: C: Style/Documentation: Missing top-level class documentation comment.
+class HouseholdsController < ApplicationController
+^^^^^
+app/controllers/households_controller.rb:73:121: C: [Correctable] Layout/LineLength: Line is too long. [123/120]
+    params.require(:household).permit(:first, :last, :UIN, :family, :email, :phonenumber, :classification, :major, :points)
+                                                                                                                        ^^^
+app/controllers/login_controller.rb:3:1: C: Style/Documentation: Missing top-level class documentation comment.
+class LoginController < ApplicationController
+^^^^^
+app/controllers/login_controller.rb:25:1: C: [Correctable] Layout/CommentIndentation: Incorrect indentation detected (column 0 instead of 2).
+#  end
+^^^^^^
+app/controllers/login_controller.rb:28:5: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+    #validate action
+    ^^^^^^^^^^^^^^^^
+app/controllers/login_controller.rb:30:5: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+    #puts "------HERE-------" + @login_attempt.username
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/login_controller.rb:31:17: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @username = "cat"
+                ^^^^^
+app/controllers/login_controller.rb:32:17: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @password = "dog"
+                ^^^^^
+app/controllers/login_controller.rb:34:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+app/controllers/login_controller.rb:35:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+app/controllers/login_controller.rb:37:7: C: Style/GlobalVars: Do not introduce global variables.
+      $adminBOOLEAN = 1
+      ^^^^^^^^^^^^^
+app/controllers/login_controller.rb:48:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+app/controllers/login_controller.rb:52:1: C: [Correctable] Layout/CommentIndentation: Incorrect indentation detected (column 0 instead of 2).
+#  end
+^^^^^^
+app/controllers/login_controller.rb:54:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+app/controllers/member_view_controller.rb:1:1: C: Style/Documentation: Missing top-level class documentation comment.
+class MemberViewController < ApplicationController
+^^^^^
+app/controllers/member_view_controller.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class MemberViewController < ApplicationController
+^
+app/controllers/member_view_controller.rb:4:3: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+      @households = Household.all
+  ^^^^
+app/controllers/member_view_controller.rb:9:3: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+      @event = Event.find(params[:id])
+  ^^^^
+app/controllers/member_view_controller.rb:18:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 6) spaces for indentation.
+      def event_params
+^^^^^^
+app/controllers/member_view_controller.rb:18:7: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+      def event_params ...
+      ^^^^^^^^^^^^^^^^
+app/helpers/application_helper.rb:3:1: C: Style/Documentation: Missing top-level module documentation comment.
+module ApplicationHelper
+^^^^^^
+app/helpers/events_helper.rb:3:1: C: Style/Documentation: Missing top-level module documentation comment.
+module EventsHelper
+^^^^^^
+app/helpers/households_helper.rb:3:1: C: Style/Documentation: Missing top-level module documentation comment.
+module HouseholdsHelper
+^^^^^^
+app/models/application_record.rb:3:1: C: Style/Documentation: Missing top-level class documentation comment.
+class ApplicationRecord < ActiveRecord::Base
+^^^^^
+app/models/household.rb:3:1: C: Style/Documentation: Missing top-level class documentation comment.
+class Household < ApplicationRecord
+^^^^^
+app/views/households/_household.json.jbuilder:4:26: E: Lint/Syntax: unexpected token tCOMMA
+(Using Ruby 2.7 parser; configure using TargetRubyVersion parameter, under AllCops)
+              :created_at, :updated_at
+                         ^
+bin/bundle:24:3: C: Metrics/CyclomaticComplexity: Cyclomatic complexity for cli_arg_version is too high. [9/7]
+  def cli_arg_version ...
+  ^^^^^^^^^^^^^^^^^^^
+bin/bundle:24:3: C: Metrics/MethodLength: Method has too many lines. [11/10]
+  def cli_arg_version ...
+  ^^^^^^^^^^^^^^^^^^^
+bin/bundle:24:3: C: Metrics/PerceivedComplexity: Perceived complexity for cli_arg_version is too high. [9/8]
+  def cli_arg_version ...
+  ^^^^^^^^^^^^^^^^^^^
+bin/bundle:91:3: C: Metrics/MethodLength: Method has too many lines. [12/10]
+  def activate_bundler ...
+  ^^^^^^^^^^^^^^^^^^^^
+bin/bundle:104:121: C: Layout/LineLength: Line is too long. [198/120]
+    warn "Activating bundler (#{bundler_requirement}) failed:\n#{gem_error.message}\n\nTo install the version of bundler this project requires, run `gem install bundler -v '#{bundler_requirement}'`"
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bin/webpack:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+#!/usr/bin/env ruby
+^
+bin/webpack:3:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
+    ^^^^^^^^^^^
+bin/webpack:3:26: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
+                         ^^^^^^^^^^
+bin/webpack:3:41: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
+                                        ^^^^^^^^^^^^^
+bin/webpack:4:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["NODE_ENV"]  ||= "development"
+    ^^^^^^^^^^
+bin/webpack:4:22: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["NODE_ENV"]  ||= "development"
+                     ^^^^^^^^^^^^^
+bin/webpack:6:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "pathname"
+        ^^^^^^^^^^
+bin/webpack:7:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../../Gemfile",
+    ^^^^^^^^^^^^^^^^
+bin/webpack:7:44: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../../Gemfile",
+                                           ^^^^^^^^^^^^^^^
+bin/webpack:8:3: C: [Correctable] Layout/ArgumentAlignment: Align the arguments of a method call if they span more than one line.
+  Pathname.new(__FILE__).realpath)
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bin/webpack:10:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "bundler/setup"
+        ^^^^^^^^^^^^^^^
+bin/webpack:12:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "webpacker"
+        ^^^^^^^^^^^
+bin/webpack:13:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "webpacker/webpack_runner"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+bin/webpack:15:29: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+APP_ROOT = File.expand_path("..", __dir__)
+                            ^^^^
+bin/webpack-dev-server:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+#!/usr/bin/env ruby
+^
+bin/webpack-dev-server:3:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
+    ^^^^^^^^^^^
+bin/webpack-dev-server:3:26: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
+                         ^^^^^^^^^^
+bin/webpack-dev-server:3:41: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
+                                        ^^^^^^^^^^^^^
+bin/webpack-dev-server:4:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["NODE_ENV"]  ||= "development"
+    ^^^^^^^^^^
+bin/webpack-dev-server:4:22: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["NODE_ENV"]  ||= "development"
+                     ^^^^^^^^^^^^^
+bin/webpack-dev-server:6:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "pathname"
+        ^^^^^^^^^^
+bin/webpack-dev-server:7:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../../Gemfile",
+    ^^^^^^^^^^^^^^^^
+bin/webpack-dev-server:7:44: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../../Gemfile",
+                                           ^^^^^^^^^^^^^^^
+bin/webpack-dev-server:8:3: C: [Correctable] Layout/ArgumentAlignment: Align the arguments of a method call if they span more than one line.
+  Pathname.new(__FILE__).realpath)
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bin/webpack-dev-server:10:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "bundler/setup"
+        ^^^^^^^^^^^^^^^
+bin/webpack-dev-server:12:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "webpacker"
+        ^^^^^^^^^^^
+bin/webpack-dev-server:13:9: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "webpacker/dev_server_runner"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bin/webpack-dev-server:15:29: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+APP_ROOT = File.expand_path("..", __dir__)
+                            ^^^^
+config/application.rb:12:3: C: Style/Documentation: Missing top-level class documentation comment.
+  class Application < Rails::Application
+  ^^^^^
+config/environments/production.rb:32:79: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+  # Disable Rails's static asset server (Apache or nginx will already do this)  
+                                                                              ^^
+config/environments/production.rb:34:33: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+  # Compress JavaScripts and CSS  
+                                ^^
+config/environments/production.rb:36:37: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+  # Generate digests for assets URLs  
+                                    ^^
+config/initializers/assets.rb:17:47: C: [Correctable] Style/PercentLiteralDelimiters: %w-literals should be delimited by [ and ].
+Rails.application.config.assets.precompile += %w(application.js)
+                                              ^^^^^^^^^^^^^^^^^^
+config/routes.rb:16:8: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  post "login/index" => "login#validate", :as => :LoginAttempt
+       ^^^^^^^^^^^^^
+config/routes.rb:16:25: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  post "login/index" => "login#validate", :as => :LoginAttempt
+                        ^^^^^^^^^^^^^^^^
+db/migrate/20210216010306_create_households.rb:3:1: C: Style/Documentation: Missing top-level class documentation comment.
+class CreateHouseholds < ActiveRecord::Migration[6.1]
+^^^^^
+db/migrate/20210216010306_create_households.rb:4:3: C: Metrics/MethodLength: Method has too many lines. [12/10]
+  def change ...
+  ^^^^^^^^^^
+db/migrate/20210223170507_create_login_attempts.rb:3:1: C: Style/Documentation: Missing top-level class documentation comment.
+class CreateLoginAttempts < ActiveRecord::Migration[6.1]
+^^^^^
+db/migrate/20210224052143_create_events.rb:2:1: C: [Correctable] Layout/LeadingEmptyLines: Unnecessary blank line at the beginning of the source.
+# frozen_string_literal: true
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+db/migrate/20210224052143_create_events.rb:4:1: C: Style/Documentation: Missing top-level class documentation comment.
+class CreateEvents < ActiveRecord::Migration[6.1]
+^^^^^
+db/migrate/20210225032812_create_backups.rb:3:1: C: Style/Documentation: Missing top-level class documentation comment.
+class CreateBackups < ActiveRecord::Migration[6.1]
+^^^^^
+db/schema.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# This file is auto-generated from the current state of the database. Instead
+^
+db/schema.rb:13:1: C: Metrics/BlockLength: Block has too many lines. [36/25]
+ActiveRecord::Schema.define(version: 2021_02_25_032812) do ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+db/schema.rb:13:38: C: [Correctable] Style/NumericLiterals: Use underscores(_) as thousands separator and separate every 3 digits with them.
+ActiveRecord::Schema.define(version: 2021_02_25_032812) do
+                                     ^^^^^^^^^^^^^^^^^
+db/schema.rb:14:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body beginning.
+db/schema.rb:16:20: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  enable_extension "plpgsql"
+                   ^^^^^^^^^
+db/schema.rb:18:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  create_table "backups", force: :cascade do |t|
+               ^^^^^^^^^
+db/schema.rb:19:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "first"
+             ^^^^^^^
+db/schema.rb:20:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "last"
+             ^^^^^^
+db/schema.rb:21:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "created_at", precision: 6, null: false
+               ^^^^^^^^^^^^
+db/schema.rb:22:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "updated_at", precision: 6, null: false
+               ^^^^^^^^^^^^
+db/schema.rb:25:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+db/schema.rb:26:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  create_table "events", force: :cascade do |t|
+               ^^^^^^^^
+db/schema.rb:27:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body beginning.
+db/schema.rb:28:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "name"
+             ^^^^^^
+db/schema.rb:29:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "description"
+             ^^^^^^^^^^^^^
+db/schema.rb:30:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "location"
+             ^^^^^^^^^^
+db/schema.rb:31:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "time"
+             ^^^^^^
+db/schema.rb:32:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "points"
+             ^^^^^^^^
+db/schema.rb:33:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.float "event_id"
+            ^^^^^^^^^^
+db/schema.rb:34:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "created_at", precision: 6, null: false
+               ^^^^^^^^^^^^
+db/schema.rb:35:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "updated_at", precision: 6, null: false
+               ^^^^^^^^^^^^
+db/schema.rb:38:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+db/schema.rb:39:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  create_table "households", force: :cascade do |t|
+               ^^^^^^^^^^^^
+db/schema.rb:40:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "first"
+             ^^^^^^^
+db/schema.rb:41:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "last"
+             ^^^^^^
+db/schema.rb:42:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "UIN"
+             ^^^^^
+db/schema.rb:43:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "family"
+             ^^^^^^^^
+db/schema.rb:44:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "email"
+             ^^^^^^^
+db/schema.rb:45:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "phonenumber"
+             ^^^^^^^^^^^^^
+db/schema.rb:46:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "classification"
+             ^^^^^^^^^^^^^^^^
+db/schema.rb:47:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "major"
+             ^^^^^^^
+db/schema.rb:48:15: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.integer "points"
+              ^^^^^^^^
+db/schema.rb:50:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "created_at", precision: 6, null: false
+               ^^^^^^^^^^^^
+db/schema.rb:51:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "updated_at", precision: 6, null: false
+               ^^^^^^^^^^^^
+db/schema.rb:54:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+db/schema.rb:55:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  create_table "login_attempts", force: :cascade do |t|
+               ^^^^^^^^^^^^^^^^
+db/schema.rb:56:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "username"
+             ^^^^^^^^^^
+db/schema.rb:57:14: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "password"
+             ^^^^^^^^^^
+db/schema.rb:59:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "created_at", precision: 6, null: false
+               ^^^^^^^^^^^^
+db/schema.rb:60:16: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "updated_at", precision: 6, null: false
+               ^^^^^^^^^^^^
+db/schema.rb:63:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+db/schema.rb:63:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body end.
+spec/event_feature/delete_spec.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require 'rails_helper'  
+^
+spec/event_feature/delete_spec.rb:1:23: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+require 'rails_helper'  
+                      ^^
+spec/event_feature/delete_spec.rb:2:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+spec/event_feature/delete_spec.rb:4:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    scenario 'success' do
+^^^^
+spec/event_feature/delete_spec.rb:5:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        event = Event.create!(name: 'Test Event', description: 'Test description', location: 'Houston', time: '3:30 PM', points: '10')
+    ^^^^
+spec/event_feature/delete_spec.rb:5:121: C: [Correctable] Layout/LineLength: Line is too long. [134/120]
+        event = Event.create!(name: 'Test Event', description: 'Test description', location: 'Houston', time: '3:30 PM', points: '10')
+                                                                                                                        ^^^^^^^^^^^^^^
+spec/event_feature/delete_spec.rb:9:14: W: [Correctable] Lint/ParenthesesAsGroupedExpression: (...) interpreted as grouped expression.
+        sleep (5)
+             ^
+spec/event_feature/login_spec.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require 'rails_helper'  
+^
+spec/event_feature/login_spec.rb:1:23: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+require 'rails_helper'  
+                      ^^
+spec/event_feature/login_spec.rb:2:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+spec/event_feature/login_spec.rb:4:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    scenario 'success' do
+^^^^
+spec/event_feature/login_spec.rb:5:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        visit events_path
+    ^^^^
+spec/event_feature/login_spec.rb:7:14: W: [Correctable] Lint/ParenthesesAsGroupedExpression: (...) interpreted as grouped expression.
+        sleep (5)
+             ^
+spec/event_feature/login_spec.rb:10:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+spec/event_feature/update_spec.rb:8:121: C: [Correctable] Layout/LineLength: Line is too long. [130/120]
+    event = Event.create!(name: 'Test Event', description: 'Test description', location: 'Houston', time: '3:30 PM', points: '10')
+                                                                                                                        ^^^^^^^^^^
+spec/event_feature/update_spec.rb:20:121: C: [Correctable] Layout/LineLength: Line is too long. [125/120]
+    event = Event.create!(name: 'Party', description: 'Test description', location: 'Houston', time: '3:30 PM', points: '10')
+                                                                                                                        ^^^^^
+spec/household_feature/create_households_spec.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+require 'rails_helper' ...
+^^^^^^^^^^^^^^^^^^^^^^
+spec/household_feature/create_households_spec.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require 'rails_helper'
+^
+spec/household_feature/create_households_spec.rb:5:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+spec/household_feature/create_households_spec.rb:12:12: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  describe "POST /subscriber_imports" do
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/household_feature/create_households_spec.rb:13:20: C: [Correctable] Style/HashSyntax: Use the new Ruby 1.9 hash syntax.
+    let(:file) { { :file => Household.import('/files/test1commadelimented.csv', 'text/csv') } }
+                   ^^^^^^^^
+spec/household_feature/edit_households_spec.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+require 'rails_helper' ...
+^^^^^^^^^^^^^^^^^^^^^^
+spec/household_feature/edit_households_spec.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require 'rails_helper'
+^
+spec/household_feature/edit_households_spec.rb:4:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    scenario 'success' do
+^^^^
+spec/household_feature/edit_households_spec.rb:5:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        Household.create!(first: 'David', last: 'Ortega', UIN: '326039485', family: 'Goose', email: 'davidortega1212@gmail.com', phonenumber: '9565218292', classification: 'U4', major: 'CECN')
+    ^^^^
+spec/household_feature/edit_households_spec.rb:5:121: C: [Correctable] Layout/LineLength: Line is too long. [192/120]
+        Household.create!(first: 'David', last: 'Ortega', UIN: '326039485', family: 'Goose', email: 'davidortega1212@gmail.com', phonenumber: '9565218292', classification: 'U4', major: 'CECN')
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/household_feature/edit_households_spec.rb:9:14: W: [Correctable] Lint/ParenthesesAsGroupedExpression: (...) interpreted as grouped expression.
+        sleep (5)
+             ^
+spec/household_feature/edit_households_spec.rb:12:14: W: [Correctable] Lint/ParenthesesAsGroupedExpression: (...) interpreted as grouped expression.
+        sleep (5)
+             ^
+spec/household_feature/edit_households_spec.rb:15:14: W: [Correctable] Lint/ParenthesesAsGroupedExpression: (...) interpreted as grouped expression.
+        sleep (5)
+             ^
+spec/household_feature/households_delete_spec.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+# require 'rails_helper' ...
+^^^^^^^^^^^^^^^^^^^^^^^^
+spec/household_feature/households_delete_spec.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+# require 'rails_helper'
+^
+spec/household_feature/households_delete_spec.rb:5:121: C: Layout/LineLength: Line is too long. [194/120]
+#         Household.create!(first: 'David', last: 'Ortega', UIN: '326039485', family: 'Goose', email: 'davidortega1212@gmail.com', phonenumber: '9565218292', classification: 'U4', major: 'CECN')
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/household_feature/households_delete_spec.rb:10:28: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+#         page.accept_alert 
+                           ^
+spec/household_feature/new_households_spec.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+require 'rails_helper' ...
+^^^^^^^^^^^^^^^^^^^^^^
+spec/household_feature/new_households_spec.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require 'rails_helper'
+^
+spec/household_feature/new_households_spec.rb:4:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    scenario 'success' do
+^^^^
+spec/household_feature/new_households_spec.rb:5:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        visit households_path
+    ^^^^
+spec/household_feature/new_households_spec.rb:8:14: W: [Correctable] Lint/ParenthesesAsGroupedExpression: (...) interpreted as grouped expression.
+        sleep (5)
+             ^
+spec/household_feature/new_households_spec.rb:18:14: W: [Correctable] Lint/ParenthesesAsGroupedExpression: (...) interpreted as grouped expression.
+        sleep (5)
+             ^
+spec/household_feature/new_households_spec.rb:21:14: W: [Correctable] Lint/ParenthesesAsGroupedExpression: (...) interpreted as grouped expression.
+        sleep (5)
+             ^
+spec/household_feature/new_households_spec.rb:23:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body end.
+spec/household_feature/new_spec.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require 'rails_helper'
+^
+spec/household_feature/show_households_spec.rb:1:1: C: Layout/EndOfLine: Carriage return character detected.
+require 'rails_helper' ...
+^^^^^^^^^^^^^^^^^^^^^^
+spec/household_feature/show_households_spec.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require 'rails_helper'
+^
+spec/household_feature/show_households_spec.rb:4:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    scenario 'success' do
+^^^^
+spec/household_feature/show_households_spec.rb:5:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        Household.create!(first: 'David', last: 'Ortega', UIN: '326039485', family: 'Goose', email: 'davidortega1212@gmail.com', phonenumber: '9565218292', classification: 'U4', major: 'CECN')
+    ^^^^
+spec/household_feature/show_households_spec.rb:5:121: C: [Correctable] Layout/LineLength: Line is too long. [192/120]
+        Household.create!(first: 'David', last: 'Ortega', UIN: '326039485', family: 'Goose', email: 'davidortega1212@gmail.com', phonenumber: '9565218292', classification: 'U4', major: 'CECN')
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/household_feature/show_households_spec.rb:9:14: W: [Correctable] Lint/ParenthesesAsGroupedExpression: (...) interpreted as grouped expression.
+        sleep (5)
+             ^
+spec/household_feature/show_households_spec.rb:12:14: W: [Correctable] Lint/ParenthesesAsGroupedExpression: (...) interpreted as grouped expression.
+        sleep (5)
+             ^
+spec/login_feature/validate_spec.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require 'rails_helper'
+^
+spec/login_feature/validate_spec.rb:5:7: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+          visit 'login/index'
+      ^^^^
+spec/login_feature/validate_spec.rb:7:16: W: [Correctable] Lint/ParenthesesAsGroupedExpression: (...) interpreted as grouped expression.
+          sleep (2)
+               ^
+spec/login_feature/validate_spec.rb:9:7: C: [Correctable] Layout/BlockAlignment: end at 9, 6 is not aligned with scenario 'success' do at 4, 2.
+      end
+      ^^^
+spec/login_feature/validate_spec.rb:14:7: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+          visit 'login/index'
+      ^^^^
+spec/login_feature/validate_spec.rb:21:16: W: [Correctable] Lint/ParenthesesAsGroupedExpression: (...) interpreted as grouped expression.
+          sleep (5)
+               ^
+spec/login_feature/validate_spec.rb:23:7: C: [Correctable] Layout/BlockAlignment: end at 23, 6 is not aligned with scenario 'success' do at 13, 2.
+      end
+      ^^^
+spec/rails_helper.rb:2:1: C: [Correctable] Layout/LeadingEmptyLines: Unnecessary blank line at the beginning of the source.
+# frozen_string_literal: true
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/spec_helper.rb:2:1: C: [Correctable] Layout/LeadingEmptyLines: Unnecessary blank line at the beginning of the source.
+# frozen_string_literal: true
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spec/spec_helper.rb:54:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+spec/spec_helper.rb:102:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body end.
+test/controllers/households_controller_test.rb:23:121: C: Layout/LineLength: Line is too long. [122/120]
+           params: { household: { UIN: @household.UIN, classification: @household.classification, email: @household.email,
+                                                                                                                        ^^
+test/controllers/households_controller_test.rb:24:121: C: Layout/LineLength: Line is too long. [173/120]
+                                  family: @household.family, first: @household.first, last: @household.last, major: @household.major, phonenumber: @household.phonenumber } }
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test/controllers/households_controller_test.rb:42:121: C: Layout/LineLength: Line is too long. [121/120]
+          params: { household: { UIN: @household.UIN, classification: @household.classification, email: @household.email,
+                                                                                                                        ^
+test/controllers/households_controller_test.rb:43:121: C: Layout/LineLength: Line is too long. [172/120]
+                                 family: @household.family, first: @household.first, last: @household.last, major: @household.major, phonenumber: @household.phonenumber } }
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+80 files inspected, 191 offenses detected, 155 offenses auto-correctable
