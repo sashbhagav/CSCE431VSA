@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   # get 'events/show'
   # get 'events/edit'
   # get 'events/delete'
+  # get 'households/index'
+  # get 'households/new'
+  # get 'households/show'
+  # get 'households/edit'
+  # get 'households/delete'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'member_view#index'
   get 'member_view/index'
@@ -23,5 +28,8 @@ Rails.application.routes.draw do
 
   resources :households do
     collection { post :import }
+    member do
+      get :delete
+    end
   end
 end

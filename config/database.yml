@@ -20,11 +20,11 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: postgres
-  password: postgres
+  username: dorteg12
+  #password: postgres
 development:
   <<: *default
-  host: localhost
+  #host: localhost
   # username: vsamemberstracker_dev
   # password: 123456
   database: vsamemberstracker_development
@@ -61,7 +61,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  host: localhost
+  #host: localhost
   # username: vsamemberstracker_dev
   # password: 123456
   database: vsamemberstracker_test
@@ -90,4 +90,4 @@ production:
   <<: *default
   database: vsamemberstracker_production
   username: vsamemberstracker
-  password: <%= ENV['VSAMEMBERSTRACKER_DATABASE_PASSWORD'] %> 
+  password: <%= ENV['VSAMEMBERSTRACKER_DATABASE_PASSWORD'] %>

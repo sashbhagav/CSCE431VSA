@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Households</h1>
 <%= link_to("<< Back to Home", events_path, :class => 'back-link') %>
-<div class="media">
-  <div class="media-body">
-    <table class="table table-hover">
+<h1>Households</h1>
+
+<div>
+  <div>
+    <table role="datatable">
       <thead>
         <tr>
           <th>First</th>
@@ -15,8 +15,9 @@
           <th>Phonenumber</th>
           <th>Classification</th>
           <th>Major</th>
-          <th>Points</th>
-          <th colspan="3"></th>
+          <th></th>
+          <th></th>
+          <th></th>
         </tr>
       </thead>
 
@@ -31,10 +32,9 @@
             <td><%= household.phonenumber %></td>
             <td><%= household.classification %></td>
             <td><%= household.major %></td>
-            <td><%= household.points %></td>
             <td><%= link_to 'Show', household %></td>
             <td><%= link_to 'Edit', edit_household_path(household) %></td>
-            <td><%= link_to 'Destroy', household, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Destroy', delete_household_path(household) %></td>
           </tr>
         <% end %>
       </tbody>
@@ -44,11 +44,9 @@
 
 
 <br>
-<h3>Import Members</h3>
-<div class = import>
-  <%= form_tag import_households_path, multipart: true do %>
-    <%= file_field_tag :file %>
-    <%= submit_tag "Upload Members"%>
-  <% end %>
-</div>
-<%= link_to 'Add a New Member', new_household_path %>
+<h3>Import household</h3>
+<%= form_tag import_households_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload Households"%>
+<% end %>
+<%= link_to 'New Household', new_household_path %>
