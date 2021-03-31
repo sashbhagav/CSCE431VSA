@@ -12,6 +12,9 @@ RSpec.describe 'Updating a event', type: :feature do
     fill_in 'event[location]', with: 'College Station'
     fill_in 'event[time]', with: '6:30 PM'
     fill_in 'event[points]', with: '5'
+    select '1998', from: 'book_date_1i'
+    select 'April', from: 'book_date_2i'
+    select '5', from: 'book_date_3i'
     click_on 'Update Event'
     visit events_path
     expect(page).to have_content('New Party')
@@ -24,6 +27,9 @@ RSpec.describe 'Updating a event', type: :feature do
     fill_in 'event[location]', with: 'College Station'
     fill_in 'event[time]', with: '9:30 AM'
     fill_in 'event[points]', with: '20'
+    select '1999', from: 'book_date_1i'
+    select 'June', from: 'book_date_2i'
+    select '10', from: 'book_date_3i'
     click_on 'Update Event'
     visit events_path
     expect(page).to have_content('')
