@@ -25,6 +25,10 @@
           <td><%= e.text_field(:location) %></td>
         </tr>
         <tr>
+          <th>Date</th>
+          <td><%= e.date.strftime("%B %d, %Y") %></td>
+        </tr>
+        <tr>
           <th>Time</th>
           <td><%= e.text_field(:time) %></td>
         </tr>
