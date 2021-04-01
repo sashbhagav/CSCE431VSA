@@ -25,6 +25,10 @@
           <td><%= e.text_field(:location) %></td>
         </tr>
         <tr>
+          <th>Date</th>
+          <td><%= e.date_select :date, start_year: Date.today.year, end_year: Date.today.year - 200 %></td>
+        </tr>
+        <tr>
           <th>Time</th>
           <td><%= e.text_field(:time) %></td>
         </tr>
