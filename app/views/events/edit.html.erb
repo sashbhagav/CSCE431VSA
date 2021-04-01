@@ -24,7 +24,7 @@
       </tr>
       <tr>
         <th>Date</th>
-        <td><%= e.date.strftime("%B %d, %Y") %></td>
+        <td><%= e.date_select :date, start_year: Date.today.year, end_year: Date.today.year - 200 %></td>
       </tr>
       <tr>
         <th>Time</th>
