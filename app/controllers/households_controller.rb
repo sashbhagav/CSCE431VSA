@@ -15,21 +15,23 @@ class HouseholdsController < ApplicationController
     @household = Household.new
   end
 
+
+
   # GET /households/1/edit
   def edit
+
   end
 
   # POST /households or /households.json
   def create
-    @household = Household.new(household_params)
-
+    @member = Household.new(household_params)
     respond_to do |format|
-      if @household.save
-        format.html { redirect_to @household, notice: "Household was successfully created." }
-        format.json { render :show, status: :created, location: @household }
+      if @member.save
+        format.html { redirect_to @member, notice: "Household was successfully created." }
+        format.json { render :show, status: :created, location: @member }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @household.errors, status: :unprocessable_entity }
+        format.json { render json: @member.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -63,14 +65,25 @@ class HouseholdsController < ApplicationController
     redirect_to households_path, notice: "households added sucessfully"
   end
 
+  def import2
+    Household.import2(params[:file])
+    redirect_to households_path, notice: "households added sucessfully"
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_household
       @household = Household.find(params[:id])
     end
+    def set_member
+      @member = Household.find(params[:id])
+    end
+
+
 
     # Only allow a list of trusted parameters through.
     def household_params
-      params.require(:household).permit(:first, :last, :UIN, :family, :email, :phonenumber, :classification, :major)
+      params.require(:household).permit(:first, :last, :UIN, :family, :email, :phonenumber, :classification, :major, :points)
     end
 end
