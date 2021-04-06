@@ -1,1 +1,1 @@
-release: rails db:migrate
+release: rails db:drop:all && rails db:create && rails db:migrate
