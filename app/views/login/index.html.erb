@@ -14,9 +14,8 @@
     <div class="LoginTitle"> <h1>Admin Login</h1> </div>
     <div class="LoginCreds" >      
       <%= form_for(:LoginAttempt) do |f| %>
-        username: <%= f.text_field (:username) %><br />
-        password: <%= f.text_field (:password) %><br />
-        <br />
+        Username: <%= f.text_field (:username) %><br />
+        Password: <%= f.password_field :password %><br/> 
         <div class="SButtons"> 
           <%= f.submit 'Submit'%>
           <a href="/member_view/index" class="button">Back</a>

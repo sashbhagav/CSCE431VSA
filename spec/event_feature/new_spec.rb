@@ -21,6 +21,9 @@ RSpec.describe 'Creating an event', type: :feature do
     fill_in 'event[location]', with: 'College Station'
     fill_in 'event[time]', with: '5:30 PM'
     fill_in 'event[points]', with: '25'
+    select '1978', from: 'event_date_1i'
+    select 'May', from: 'event_date_2i'
+    select '23', from: 'event_date_3i'
 
     click_on 'Add Event'
     visit events_path
@@ -35,6 +38,9 @@ RSpec.describe 'Creating an event', type: :feature do
     fill_in 'event[location]', with: 'Houston'
     fill_in 'event[time]', with: '6:30 PM'
     fill_in 'event[points]', with: '5'
+    select '1995', from: 'event_date_1i'
+    select 'April', from: 'event_date_2i'
+    select '22', from: 'event_date_3i'
     visit events_path
     expect(page).to have_content('') #-----need to figure out how to fix flash
   end

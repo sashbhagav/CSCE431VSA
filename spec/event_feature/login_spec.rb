@@ -5,6 +5,6 @@ RSpec.describe 'Going to Login page', type: :feature do
         visit events_path
         click_on 'Administrator Login'
         sleep (5)
-        expect(page).to have_content('username')
+        expect(page).to have_content('Username')
     end
 end
