@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'import_houshold/index'
   # get 'events/index'
   # get 'events/new'
   # get 'events/show'
