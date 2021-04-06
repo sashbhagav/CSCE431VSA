@@ -30,9 +30,9 @@ class LoginController < ApplicationController
     #puts "------HERE-------" + @login_attempt.username
     @username = "cat"
     @password = "dog"
-
-
-
+    # puts "-------------"
+    # puts @login_attempt.password
+    # puts "-------------"
     if @login_attempt.username == @username && @login_attempt.password == @password
       $adminBOOLEAN = 1
       redirect_to(controller: 'events', action: 'index')
