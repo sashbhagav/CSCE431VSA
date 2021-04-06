@@ -47,7 +47,6 @@ jobs:
           # bundle exec rails db:prepare
           bundle exec rails db:create
           bundle exec rails db:migrate
-          export selenium_remote_url="https://selenium__standalone-chrome:4444/wd/hub"
           bundle exec rspec .
   build:
     runs-on: ubuntu-latest
