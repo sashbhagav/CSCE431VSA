@@ -24,6 +24,7 @@ RSpec.describe 'Creating an event', type: :feature do
     select '1978', from: 'event_date_1i'
     select 'May', from: 'event_date_2i'
     select '23', from: 'event_date_3i'
+    fill_in 'event[link]', with: 'http://tamu.zoom.us/'
 
     click_on 'Add Event'
     visit events_path
@@ -41,6 +42,7 @@ RSpec.describe 'Creating an event', type: :feature do
     select '1995', from: 'event_date_1i'
     select 'April', from: 'event_date_2i'
     select '22', from: 'event_date_3i'
+    fill_in 'event[link]', with: 'http://tamu.zoom.us/'
     visit events_path
     expect(page).to have_content('') #-----need to figure out how to fix flash
   end
