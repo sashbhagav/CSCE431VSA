@@ -10,7 +10,7 @@ class CreateEvents < ActiveRecord::Migration[6.1]
       t.string :time
       t.string :points
       t.timestamp :date
-      t:string :link
+      t.string :link
 
       t.float :event_id
 
