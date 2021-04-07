@@ -4,6 +4,7 @@ class HouseholdsController < ApplicationController
   # GET /households or /households.json
   def index
     @households = Household.all
+    @newhouses = Newhouse.all
   end
 
   # GET /households/1 or /households/1.json

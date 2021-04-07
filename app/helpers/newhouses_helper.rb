@@ -1,0 +1,2 @@
+module NewhousesHelper
+end

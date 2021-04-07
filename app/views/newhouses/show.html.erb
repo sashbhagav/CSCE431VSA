@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First:</strong>
+  <%= @newhouse.first %>
+</p>
+
+<p>
+  <strong>Last:</strong>
+  <%= @newhouse.last %>
+</p>
+
+<p>
+  <strong>Uin:</strong>
+  <%= @newhouse.UIN %>
+</p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @newhouse.family %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @newhouse.email %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @newhouse.phonenumber %>
+</p>
+
+<p>
+  <strong>Classification:</strong>
+  <%= @newhouse.classification %>
+</p>
+
+<p>
+  <strong>Major:</strong>
+  <%= @newhouse.major %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @newhouse.points %>
+</p>
+
+<%= link_to 'Edit', edit_newhouse_path(@newhouse) %> |
+<%= link_to 'Back', households_path %>

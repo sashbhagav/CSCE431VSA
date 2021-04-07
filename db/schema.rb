@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_25_032812) do
+ActiveRecord::Schema.define(version: 2021_04_07_025423) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,10 +28,10 @@ ActiveRecord::Schema.define(version: 2021_02_25_032812) do
     t.string "location"
     t.string "time"
     t.string "points"
+    t.datetime "date"
     t.float "event_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.datetime "date"
   end
 
   create_table "households", force: :cascade do |t|
@@ -51,6 +51,20 @@ ActiveRecord::Schema.define(version: 2021_02_25_032812) do
   create_table "login_attempts", force: :cascade do |t|
     t.string "username"
     t.string "password"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "newhouses", force: :cascade do |t|
+    t.string "first"
+    t.string "last"
+    t.string "UIN"
+    t.string "family"
+    t.string "email"
+    t.string "phonenumber"
+    t.string "classification"
+    t.string "major"
+    t.integer "points"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

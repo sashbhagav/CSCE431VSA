@@ -38,6 +38,23 @@
           </tr>
         <% end %>
       </tbody>
+      <tbody>
+        <% @newhouses.each do |newhouse| %>
+          <tr>
+            <td><%= newhouse.first %></td>
+            <td><%= newhouse.last %></td>
+            <td><%= newhouse.UIN %></td>
+            <td><%= newhouse.family %></td>
+            <td><%= newhouse.email %></td>
+            <td><%= newhouse.phonenumber %></td>
+            <td><%= newhouse.classification %></td>
+            <td><%= newhouse.major %></td>
+            <td><%= link_to 'Show', newhouse %></td>
+            <td><%= link_to 'Edit', edit_newhouse_path(newhouse) %></td>
+            <td><%= link_to 'Destroy', delete_newhouse_path(newhouse) %></td>
+          </tr>
+        <% end %>
+      </tbody>
     </table>
   </div>
 </div>
@@ -45,8 +62,9 @@
 
 <br>
 <h3>Import household</h3>
+
 <%= form_tag import_households_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Upload Households"%>
 <% end %>
-<%= link_to 'New Household', new_household_path %>
+<%= link_to 'New Household', new_newhouse_path %>

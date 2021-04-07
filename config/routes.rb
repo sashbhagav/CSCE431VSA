@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'import_houshold/index'
+  # get 'newhouses/index'
+  # get 'newhouses/new'
+  # get 'newhouses/index'
+  # get 'importhouses/index'
+  # get 'import_houshold/index'
   # get 'events/index'
   # get 'events/new'
   # get 'events/show'
@@ -22,6 +26,12 @@ Rails.application.routes.draw do
   post "login/index" => "login#validate", :as => :LoginAttempt
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :events do
+    member do
+      get :delete
+    end
+  end
+
+  resources :newhouses do
     member do
       get :delete
     end
