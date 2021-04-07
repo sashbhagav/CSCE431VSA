@@ -7,4 +7,5 @@ class Event < ApplicationRecord
   validates :date, presence: true
   validates :time, presence: true
   validates :points, presence: true
+  validates :link, presence: true
 end
