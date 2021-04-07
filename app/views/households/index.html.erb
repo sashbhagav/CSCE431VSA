@@ -38,23 +38,6 @@
           </tr>
         <% end %>
       </tbody>
-      <tbody>
-        <% @newhouses.each do |newhouse| %>
-          <tr>
-            <td><%= newhouse.first %></td>
-            <td><%= newhouse.last %></td>
-            <td><%= newhouse.UIN %></td>
-            <td><%= newhouse.family %></td>
-            <td><%= newhouse.email %></td>
-            <td><%= newhouse.phonenumber %></td>
-            <td><%= newhouse.classification %></td>
-            <td><%= newhouse.major %></td>
-            <td><%= link_to 'Show', newhouse %></td>
-            <td><%= link_to 'Edit', edit_newhouse_path(newhouse) %></td>
-            <td><%= link_to 'Destroy', delete_newhouse_path(newhouse) %></td>
-          </tr>
-        <% end %>
-      </tbody>
     </table>
   </div>
 </div>

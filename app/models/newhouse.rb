@@ -1,4 +1,5 @@
 class Newhouse < ApplicationRecord
+  self.table_name = "households"
   validates :first, :last, :UIN, :family, :email, :phonenumber, :classification, :major, :presence => true
   validates :UIN, :length => { :minimum => 9}
   validates :UIN, :length => { :maximum => 9}
