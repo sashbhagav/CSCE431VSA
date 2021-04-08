@@ -24,14 +24,15 @@ class HouseholdsController < ApplicationController
 
   # POST /households or /households.json
   def create
-    @member = Household.new(household_params)
+    @household = Household.new(household_params)
+
     respond_to do |format|
-      if @member.save
-        format.html { redirect_to @member, notice: "Household was successfully created." }
-        format.json { render :show, status: :created, location: @member }
+      if @household.save
+        format.html { redirect_to @household, notice: "Household was successfully created." }
+        format.json { render :show, status: :created, location: @household }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @member.errors, status: :unprocessable_entity }
+        format.json { render json: @household.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -76,9 +77,7 @@ class HouseholdsController < ApplicationController
     def set_household
       @household = Household.find(params[:id])
     end
-    def set_member
-      @member = Household.find(params[:id])
-    end
+
 
 
 
