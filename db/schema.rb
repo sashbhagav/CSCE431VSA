@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_032812) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "date"
+    t.text "link"
   end
 
   create_table "households", force: :cascade do |t|
