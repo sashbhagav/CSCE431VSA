@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_032812) do
     t.string "location"
     t.string "time"
     t.string "points"
+    t.datetime "date"
     t.float "event_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
