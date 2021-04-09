@@ -19,38 +19,35 @@
   </div>
 
     <table class="listing" summary="events list">
-      <thead>
-        <tr class="header">
-          <th>Events</th>
-          <th>Description</th>
-          <th>Location</th>
-          <th>Time</th>
-          <th>Points</th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @events.each do |event| %>
-        <tr>
-          <td><%= event.name %></td>
-          <td><%= event.description %></td>
-          <td><%= event.location %></td>
-          <td><%= event.time %></td>
-          <td><%= event.points %></td>
-          <td>  <%= link_to("Details", event_path(event), :class => 'action show') %> </td>
-          <td>  <%= link_to("Update", edit_event_path(event), :class => 'action edit') %> </td>
-          <td>  <%= link_to("Delete", delete_event_path(event), :class => 'action delete') %> </td>
-        </tr>
-      <% end %>
-      </tbody>
+      <tr class="header">
+        <th>Events</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Points</th>
+        <th>Link</th>
+
+      </tr>
+      <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.description %></td>
+        <td><%= event.location %></td>
+        <td><%= event&.date&.strftime('%B %e, %Y') %></td>
+        <td><%= event.time %></td>
+        <td><%= event.points %></td>
+        <td><%= event.link %></td>
+          <td class="actions">
+          <%= link_to("Details", event_path(event), :class => 'action show') %>
+          <%= link_to("Update", edit_event_path(event), :class => 'action edit') %>
+          <%= link_to("Delete", delete_event_path(event), :class => 'action delete') %>
+        </td>
+      </tr>
+
+
+    <% end %>
     </table>
-
-
-
-
-
 
       <div class="media">
         <h2>VSA Points</h2>
