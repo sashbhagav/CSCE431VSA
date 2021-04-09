@@ -23,9 +23,10 @@ default: &default
   username: postgres
   password: postgres
 development:
-  <<: *default 
+  <<: *default
   host: localhost
   # username: vsamemberstracker_dev
+  # password: 123456
   database: vsamemberstracker_development
 
   # The specified database role being used to connect to postgres.
@@ -64,8 +65,6 @@ test:
   # username: vsamemberstracker_dev
   # password: 123456
   database: vsamemberstracker_test
-  username: vsaadmin
-  password: 123456
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
