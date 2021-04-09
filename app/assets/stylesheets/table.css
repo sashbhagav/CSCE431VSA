@@ -1,0 +1,14 @@
+
+table{
+   overflow-y:scroll;
+   height:175px;
+   display:block;
+}
+.center {
+  margin-left:70vh;
+  margin-right:60vh;
+}
+.memberviewCenter {
+  margin-left:80vh;
+  margin-right:75vh;
+}

@@ -4,19 +4,39 @@ class HouseholdsController < ApplicationController
   # GET /households or /households.json
   def index
     @households = Household.all
+    if($adminBOOLEAN == 1)
+        render('index')
+    else
+        redirect_to(controller: 'member_view', action: 'index')
+    end
   end
 
   # GET /households/1 or /households/1.json
   def show
+    if($adminBOOLEAN == 1)
+        render('show')
+    else
+        redirect_to(controller: 'member_view', action: 'index')
+    end
   end
 
   # GET /households/new
   def new
     @household = Household.new
+    if($adminBOOLEAN == 1)
+        render('new')
+    else
+        redirect_to(controller: 'member_view', action: 'index')
+    end
   end
 
   # GET /households/1/edit
   def edit
+    if($adminBOOLEAN == 1)
+        render('edit')
+    else
+        redirect_to(controller: 'member_view', action: 'index')
+    end
   end
 
   # POST /households or /households.json
@@ -50,6 +70,11 @@ class HouseholdsController < ApplicationController
   # DELETE /households/1 or /households/1.json
   def delete
     @household = Household.find(params[:id])
+    if($adminBOOLEAN == 1)
+        render('delete')
+    else
+        redirect_to(controller: 'member_view', action: 'index')
+    end
   end
 
   def destroy

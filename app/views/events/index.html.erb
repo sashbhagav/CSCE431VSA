@@ -10,6 +10,7 @@
 
 
 <body>
+  <%= stylesheet_link_tag "table" %>
     <%= javascript_include_tag 'test' %>
   <div class= "events_index">
     <%= image_tag ("vsa.png") %>
@@ -17,16 +18,16 @@
     <p>View all the Events in our club</p>
   </div>
 
-    <table class="listing" summary="events list">
-      <tr class="header">
-        <th>Events</th>
-        <th>Description</th>
-        <th>Location</th>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Points</th>
 
-      </tr>
+      <table class ="center">
+        <tr class="header">
+          <th>Events</th>
+          <th>Description</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Points</th>
+        </tr>
       <% @events.each do |event| %>
       <tr>
         <td><%= event.name %></td>
@@ -45,12 +46,13 @@
 
     <% end %>
     </table>
-</div>
+
+
 
 <div class="media">
 <h2>VSA Points</h2>
   <div class="media-body">
-    <table class="table_table_hover">
+    <table class="memberviewCenter">
       <thead>
         <tr>
           <th>First</th>

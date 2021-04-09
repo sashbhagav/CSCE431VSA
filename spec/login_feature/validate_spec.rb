@@ -22,3 +22,20 @@ RSpec.describe 'correct admin login attempt', type: :feature do
           expect(page).to have_content('VSA Events')
       end
 end
+
+
+
+RSpec.configure do |config|
+  config.include ActionDispatch::TestProcess
+
+  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+
+  describe "Handle 200 members and 15 events" do
+  let(:file) { { :file => import_households('/files/test1commadelimented2.csv', 'text/csv') } }
+  subject { post :create, :subscriber_import => file }
+  
+
+  end
+
+end

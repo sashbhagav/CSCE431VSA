@@ -21,6 +21,11 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    if($adminBOOLEAN == 1)
+        render('new')
+    else
+        redirect_to(controller: 'member_view', action: 'index')
+    end
   end
 
   def create
@@ -32,6 +37,11 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find(params[:id])
+    if($adminBOOLEAN == 1)
+        render('edit')
+    else
+        redirect_to(controller: 'member_view', action: 'index')
+    end
   end
 
   def update
@@ -45,6 +55,11 @@ class EventsController < ApplicationController
 
   def delete
     @event = Event.find(params[:id])
+    if($adminBOOLEAN == 1)
+        render('delete')
+    else
+        redirect_to(controller: 'member_view', action: 'index')
+    end
   end
 
   def destroy
