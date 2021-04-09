@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/mnt/c/Users/19565/Desktop/sprint3_repo_Copy/CSCE431VSA/app/helpers/application_helper.rb": {
+      "/mnt/c/431/CSCE431VSA/app/helpers/application_helper.rb": {
         "lines": [
           null,
           null,
@@ -9,7 +9,7 @@
           null
         ]
       },
-      "/mnt/c/Users/19565/Desktop/sprint3_repo_Copy/CSCE431VSA/app/helpers/events_helper.rb": {
+      "/mnt/c/431/CSCE431VSA/app/helpers/events_helper.rb": {
         "lines": [
           null,
           null,
@@ -17,7 +17,7 @@
           null
         ]
       },
-      "/mnt/c/Users/19565/Desktop/sprint3_repo_Copy/CSCE431VSA/app/helpers/households_helper.rb": {
+      "/mnt/c/431/CSCE431VSA/app/helpers/households_helper.rb": {
         "lines": [
           null,
           null,
@@ -25,7 +25,21 @@
           null
         ]
       },
-      "/mnt/c/Users/19565/Desktop/sprint3_repo_Copy/CSCE431VSA/app/models/event.rb": {
+      "/mnt/c/431/CSCE431VSA/app/models/event.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/mnt/c/431/CSCE431VSA/app/models/application_record.rb": {
         "lines": [
           null,
           null,
@@ -34,16 +48,7 @@
           null
         ]
       },
-      "/mnt/c/Users/19565/Desktop/sprint3_repo_Copy/CSCE431VSA/app/models/application_record.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/mnt/c/Users/19565/Desktop/sprint3_repo_Copy/CSCE431VSA/app/controllers/events_controller.rb": {
+      "/mnt/c/431/CSCE431VSA/app/controllers/events_controller.rb": {
         "lines": [
           null,
           null,
@@ -53,10 +58,10 @@
           null,
           null,
           1,
-          8,
-          8,
-          8,
-          6,
+          2,
+          2,
+          2,
+          0,
           null,
           2,
           null,
@@ -67,24 +72,24 @@
           null,
           null,
           1,
-          2,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
           null,
           null,
           1,
           0,
           0,
           0,
-          0,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
           null,
           0,
           null,
@@ -95,9 +100,9 @@
           null,
           null,
           1,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
           null,
           null,
           1,
@@ -117,7 +122,7 @@
           null
         ]
       },
-      "/mnt/c/Users/19565/Desktop/sprint3_repo_Copy/CSCE431VSA/app/controllers/application_controller.rb": {
+      "/mnt/c/431/CSCE431VSA/app/controllers/application_controller.rb": {
         "lines": [
           null,
           null,
@@ -125,10 +130,10 @@
           null
         ]
       },
-      "/mnt/c/Users/19565/Desktop/sprint3_repo_Copy/CSCE431VSA/app/models/household.rb": {
+      "/mnt/c/431/CSCE431VSA/app/models/household.rb": {
         "lines": [
           1,
-          1,
+          null,
           1,
           1,
           1,
@@ -142,29 +147,17 @@
           1,
           1,
           null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
           1,
           0,
           0,
           0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
           null,
           null,
           null,
           null
         ]
       },
-      "/mnt/c/Users/19565/Desktop/sprint3_repo_Copy/CSCE431VSA/app/controllers/member_view_controller.rb": {
+      "/mnt/c/431/CSCE431VSA/app/controllers/member_view_controller.rb": {
         "lines": [
           1,
           1,
@@ -178,7 +171,7 @@
           null,
           null,
           1,
-          1,
+          0,
           null,
           null,
           1,
@@ -189,173 +182,239 @@
           null
         ]
       },
-      "/mnt/c/Users/19565/Desktop/sprint3_repo_Copy/CSCE431VSA/app/controllers/login_controller.rb": {
+      "/mnt/c/431/CSCE431VSA/app/channels/application_cable/channel.rb": {
         "lines": [
           null,
           null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          3,
-          null,
-          3,
-          3,
-          null,
-          null,
-          null,
-          3,
-          2,
-          2,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          3,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/mnt/c/Users/19565/Desktop/sprint3_repo_Copy/CSCE431VSA/app/models/login_attempt.rb": {
+      "/mnt/c/431/CSCE431VSA/app/channels/application_cable/connection.rb": {
         "lines": [
           null,
           null,
-          1,
-          null
-        ]
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/mnt/c/Users/19565/Desktop/sprint3_repo_Copy/CSCE431VSA/app/controllers/households_controller.rb": {
+      "/mnt/c/431/CSCE431VSA/app/controllers/households_controller.rb": {
         "lines": [
-          1,
-          1,
-          null,
-          null,
-          1,
-          15,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          4,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          4,
-          4,
-          4,
-          4,
-          2,
-          null,
-          4,
-          2,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          4,
-          4,
-          4,
-          2,
-          null,
-          4,
-          2,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
           0,
           0,
           null,
           null,
-          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/mnt/c/431/CSCE431VSA/app/controllers/login_controller.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
           0,
           0,
           null,
           null,
           null,
-          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
-          1,
-          14,
+          0,
+          null,
+          0,
           null,
           null,
           null,
           null,
           null,
           null,
-          1,
-          8,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
           null,
           null
-        ]
+        ],
+        "branches": {
+        }
+      },
+      "/mnt/c/431/CSCE431VSA/app/jobs/application_job.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/mnt/c/431/CSCE431VSA/app/mailers/application_mailer.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/mnt/c/431/CSCE431VSA/app/models/backup.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/mnt/c/431/CSCE431VSA/app/models/login_attempt.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/mnt/c/431/CSCE431VSA/app/models/rail.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1617860171
+    "timestamp": 1617247471
   }
 }
