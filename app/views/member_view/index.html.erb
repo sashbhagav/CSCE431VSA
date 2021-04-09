@@ -13,7 +13,7 @@
 </div>
 <body>
   <%= javascript_include_tag 'test' %>
-
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <div class= "events_index">
   <%= image_tag ("vsa.png") %>
   <h2>VSA Events</h2>
@@ -49,7 +49,7 @@
   <div class="media">
   <h2>VSA Points</h2>
     <div class="media-body">
-      <table class="table_table_hover">
+      <table role="datatable"class="table_table_hover">
         <thead>
           <tr>
             <th>First</th>
