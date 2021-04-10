@@ -10,25 +10,24 @@
 
 
 <body>
+  <%= stylesheet_link_tag "table" %>
     <%= javascript_include_tag 'test' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <div class= "events_index">
     <%= image_tag ("vsa.png") %>
     <h2>VSA Events    </h2>
     <p>View all the Events in our club</p>
   </div>
 
-    <table class="listing" summary="events list">
-      <tr class="header">
-        <th>Events</th>
-        <th>Description</th>
-        <th>Location</th>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Points</th>
-        <th>Link</th>
-
-      </tr>
+      <table class ="center">
+        <tr class="header">
+          <th>Events</th>
+          <th>Description</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Points</th>
+          <th>Link</th>
+        </tr>
       <% @events.each do |event| %>
       <tr>
         <td><%= event.name %></td>

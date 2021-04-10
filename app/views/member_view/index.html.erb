@@ -12,13 +12,14 @@
   <%= button_to("Administrator Login", { :action => "login" }, :method => :get, :class => 'login new') %>
 </div>
 <body>
+  <%= stylesheet_link_tag "table" %>
   <%= javascript_include_tag 'test' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <div class= "events_index">
   <%= image_tag ("vsa.png") %>
   <h2>VSA Events</h2>
   <p>View all of the Events in our club</p>
-    <table class="listing" summary="events list">
+    <table class="center">
       <tr class="header">
         <th>Events</th>
         <th>Description</th>
