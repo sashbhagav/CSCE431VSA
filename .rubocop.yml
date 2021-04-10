@@ -21,7 +21,15 @@ Metrics/BlockLength:
     - spec/**/*
     - config/routes.rb
 
+GlobalVars:
+  AllowedVariables:
+    - $redis
 
+Layout/EndOfLine:
+   Enabled: False 
 
-Style/EndOfLine:
-  EnforcedStyle: lf
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 200

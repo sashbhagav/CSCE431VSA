@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class Household < ApplicationRecord
-  validates :first, :last, :UIN, :family, :email, :phonenumber, :classification, :major, presence: true
+  validates :first, :last, :UIN, :family, :email, :phonenumber, :classification, :major,
+            presence: true
   validates :UIN, length: { minimum: 9 }
   validates :UIN, length: { maximum: 9 }
   validates :phonenumber, length: { minimum: 10 }
