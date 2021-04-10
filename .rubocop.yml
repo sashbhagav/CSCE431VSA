@@ -27,9 +27,3 @@ GlobalVars:
 
 Layout/EndOfLine:
    Enabled: False 
-
-Documentation:
-  Enabled: false
-
-Metrics/LineLength:
-  Max: 200
