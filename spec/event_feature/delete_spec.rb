@@ -23,6 +23,9 @@ RSpec.describe 'Deleting an event', type: :feature do
         sleep (5)
         click_on 'Delete event'
         expect(page).not_to have_content('Test Event')
+        
+        visit events_path
+        click_on 'Logout'
 
     end
 end
