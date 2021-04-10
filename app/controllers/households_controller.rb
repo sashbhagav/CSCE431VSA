@@ -30,6 +30,8 @@ class HouseholdsController < ApplicationController
     end
   end
 
+
+
   # GET /households/1/edit
   def edit
     if($adminBOOLEAN == 1)
@@ -88,14 +90,23 @@ class HouseholdsController < ApplicationController
     redirect_to households_path, notice: "households added sucessfully"
   end
 
+  def import2
+    Household.import2(params[:file])
+    redirect_to households_path, notice: "households added sucessfully"
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_household
       @household = Household.find(params[:id])
     end
 
+
+
+
     # Only allow a list of trusted parameters through.
     def household_params
-      params.require(:household).permit(:first, :last, :UIN, :family, :email, :phonenumber, :classification, :major)
+      params.require(:household).permit(:first, :last, :UIN, :family, :email, :phonenumber, :classification, :major, :points)
     end
 end

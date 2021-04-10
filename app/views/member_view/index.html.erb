@@ -14,8 +14,7 @@
 <body>
   <%= stylesheet_link_tag "table" %>
   <%= javascript_include_tag 'test' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <div class= "events_index">
   <%= image_tag ("vsa.png") %>
   <h2>VSA Events</h2>
@@ -28,6 +27,7 @@
         <th> Date </th>
         <th>Time</th>
         <th>Points</th>
+        <th>Link</th>
 
       </tr>
       <% @events.each do |event| %>
@@ -38,6 +38,7 @@
         <td><%= event&.date&.strftime('%B %e, %Y') %></td>
         <td><%= event.time %></td>
         <td><%= event.points %></td>
+        <td><%= event.link %></td>
           <td class="actions">
           <%= link_to("Details", event_path(event), :class => 'action show') %>
         </td>

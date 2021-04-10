@@ -7,6 +7,7 @@
     <table role="datatable">
       <thead>
         <tr>
+          <th>Id</th>
           <th>First</th>
           <th>Last</th>
           <th>Uin</th>
@@ -15,6 +16,7 @@
           <th>Phonenumber</th>
           <th>Classification</th>
           <th>Major</th>
+          <th>Points</th>
           <th></th>
           <th></th>
           <th></th>
@@ -24,6 +26,7 @@
       <tbody>
         <% @households.each do |household| %>
           <tr>
+            <td><%= household.id %></td>
             <td><%= household.first %></td>
             <td><%= household.last %></td>
             <td><%= household.UIN %></td>
@@ -32,6 +35,7 @@
             <td><%= household.phonenumber %></td>
             <td><%= household.classification %></td>
             <td><%= household.major %></td>
+            <td><%= household.points %></td>
             <td><%= link_to 'Show', household %></td>
             <td><%= link_to 'Edit', edit_household_path(household) %></td>
             <td><%= link_to 'Destroy', delete_household_path(household) %></td>
@@ -49,4 +53,11 @@
   <%= file_field_tag :file %>
   <%= submit_tag "Upload Households"%>
 <% end %>
+
 <%= link_to 'New Household', new_household_path %>
+
+<h3>Import Points</h3>
+<%= form_tag households_import2_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload Points"%>
+<% end %>

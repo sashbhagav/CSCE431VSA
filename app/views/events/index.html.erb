@@ -12,12 +12,12 @@
 <body>
   <%= stylesheet_link_tag "table" %>
     <%= javascript_include_tag 'test' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <div class= "events_index">
     <%= image_tag ("vsa.png") %>
     <h2>VSA Events    </h2>
     <p>View all the Events in our club</p>
   </div>
-
 
       <table class ="center">
         <tr class="header">
@@ -27,6 +27,7 @@
           <th>Date</th>
           <th>Time</th>
           <th>Points</th>
+          <th>Link</th>
         </tr>
       <% @events.each do |event| %>
       <tr>
@@ -36,6 +37,7 @@
         <td><%= event&.date&.strftime('%B %e, %Y') %></td>
         <td><%= event.time %></td>
         <td><%= event.points %></td>
+        <td><%= event.link %></td>
           <td class="actions">
           <%= link_to("Details", event_path(event), :class => 'action show') %>
           <%= link_to("Update", edit_event_path(event), :class => 'action edit') %>
@@ -47,50 +49,48 @@
     <% end %>
     </table>
 
+      <div class="media">
+        <h2>VSA Points</h2>
+        <div class="media-body">
+          <table role="datatable" class="table_table_hover">
+            <thead>
+              <tr>
+                <th>First</th>
+                <th>Last</th>
+                <th>Uin</th>
+                <th>Family</th>
+                <th>Email</th>
+                <th>Phonenumber</th>
+                <th>Classification</th>
+                <th>Major</th>
+                <th>Points</th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
 
-
-<div class="media">
-<h2>VSA Points</h2>
-  <div class="media-body">
-    <table role="datatable" class="table_table_hover">
-      <thead>
-        <tr>
-          <th>First</th>
-               <th>Last</th>
-               <th>Uin</th>
-               <th>Family</th>
-               <th>Email</th>
-               <th>Phonenumber</th>
-               <th>Classification</th>
-               <th>Major</th>
-               <th>Points</th>
-               <th></th>
-               <th></th>
-               <th></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @households.each do |household| %>
-          <tr>
-            <td><%= household.first %></td>
-            <td><%= household.last %></td>
-            <td><%= household.UIN %></td>
-            <td><%= household.family %></td>
-            <td><%= household.email %></td>
-            <td><%= household.phonenumber %></td>
-            <td><%= household.classification %></td>
-            <td><%= household.major %></td>
-            <td><%= household.points %></td>
-            <td><%= link_to 'Show', household %></td>
-            <td><%= link_to 'Edit', edit_household_path(household) %></td>
-            <td><%= link_to 'Destroy', delete_household_path(household), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-</div>
+            <tbody>
+              <% @households.each do |household| %>
+                <tr>
+                  <td><%= household.first %></td>
+                  <td><%= household.last %></td>
+                  <td><%= household.UIN %></td>
+                  <td><%= household.family %></td>
+                  <td><%= household.email %></td>
+                  <td><%= household.phonenumber %></td>
+                  <td><%= household.classification %></td>
+                  <td><%= household.major %></td>
+                  <td><%= household.points %></td>
+                  <td><%= link_to 'Show', household %></td>
+                  <td><%= link_to 'Edit', edit_household_path(household) %></td>
+                  <td><%= link_to 'Destroy', delete_household_path(household) %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
 <div class="PieChart">
     <%= pie_chart Household.group(:family).sum(:points) %>
