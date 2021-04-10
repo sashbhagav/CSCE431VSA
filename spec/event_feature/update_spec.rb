@@ -18,7 +18,7 @@ RSpec.describe 'Updating a event', type: :feature do
     sleep (5)
     expect(page).to have_content('VSA Events')
 
-    event = Event.create!(name: 'Test Event', description: 'Test description', location: 'Houston', time: '3:30 PM', points: '10', date: '13 March 2000')
+    event = Event.create!(name: 'Test Event', description: 'Test description', location: 'Houston', time: '3:30 PM', points: '10', date: '13 March 2000', link: "tamu.zoom.us")
     visit edit_event_path(id: event.id)
     fill_in 'event[name]', with: 'New Party'
     fill_in 'event[description]', with: 'Fun'
@@ -46,7 +46,7 @@ RSpec.describe 'Updating a event', type: :feature do
     sleep (5)
     expect(page).to have_content('VSA Events')
 
-    event = Event.create!(name: 'Party', description: 'Test description', location: 'Houston', time: '3:30 PM', points: '10', date: '15 May 1997')
+    event = Event.create!(name: 'Party', description: 'Test description', location: 'Houston', time: '3:30 PM', points: '10', date: '15 May 1997', link: "tamu.zoom.us")
     visit edit_event_path(id: event.id)
     fill_in 'event[name]', with: ''
     fill_in 'event[description]', with: 'Test'
