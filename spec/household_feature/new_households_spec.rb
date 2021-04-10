@@ -2,6 +2,14 @@ require 'rails_helper'
 
 RSpec.describe 'new household ', type: :feature do
   scenario 'creating new household' do
+    visit 'login/index'
+    sleep (1)
+    within('form') do
+      fill_in 'LoginAttempt_username', with: 'cat'
+      fill_in 'LoginAttempt_password', with: 'dog'
+    end
+    click_on 'Submit'
+
       visit households_path
       # expect(page).to have_content('David')
       click_on 'New Household'
@@ -36,5 +44,8 @@ RSpec.describe 'new household ', type: :feature do
       expect(page).to have_content('errors')
       click_on 'Back'
       sleep (5)
+
+      visit events_path
+      click_on 'Logout'
   end
 end
