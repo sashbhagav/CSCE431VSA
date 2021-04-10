@@ -31,7 +31,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.save
-    flash[:added] = 'you have added an event'
+    flash[:added] = 'you have added '  + @event.name
     redirect_to(events_path)
   end
 
