@@ -4,8 +4,21 @@ require 'rails_helper'
 
 # Updating an event
 RSpec.describe 'Updating a event', type: :feature do
+
+
+
   scenario 'valid inputs' do
-    event = Event.create!(name: 'Test Event', description: 'Test description', location: 'Houston', time: '3:30 PM', points: '10', date: '13 March 2000', link: 'http://tamu.zoom.us/')
+    visit 'login/index'
+    within('form') do
+      fill_in 'LoginAttempt_username', with: 'cat'
+      fill_in 'LoginAttempt_password', with: 'dog'
+    end
+
+    click_on 'Submit'
+    sleep (5)
+    expect(page).to have_content('VSA Events')
+
+    event = Event.create!(name: 'Test Event', description: 'Test description', location: 'Houston', time: '3:30 PM', points: '10', date: '13 March 2000', link: "tamu.zoom.us")
     visit edit_event_path(id: event.id)
     fill_in 'event[name]', with: 'New Party'
     fill_in 'event[description]', with: 'Fun'
@@ -18,9 +31,22 @@ RSpec.describe 'Updating a event', type: :feature do
     click_on 'Update Event'
     visit events_path
     expect(page).to have_content('New Party')
+
+    visit events_path
+    click_on 'Logout'
   end
   scenario 'valid inputs' do
-    event = Event.create!(name: 'Party', description: 'Test description', location: 'Houston', time: '3:30 PM', points: '10', date: '15 May 1997', link: 'http://tamu.zoom.us/')
+    visit 'login/index'
+    within('form') do
+      fill_in 'LoginAttempt_username', with: 'cat'
+      fill_in 'LoginAttempt_password', with: 'dog'
+    end
+
+    click_on 'Submit'
+    sleep (5)
+    expect(page).to have_content('VSA Events')
+
+    event = Event.create!(name: 'Party', description: 'Test description', location: 'Houston', time: '3:30 PM', points: '10', date: '15 May 1997', link: "tamu.zoom.us")
     visit edit_event_path(id: event.id)
     fill_in 'event[name]', with: ''
     fill_in 'event[description]', with: 'Test'
@@ -33,5 +59,8 @@ RSpec.describe 'Updating a event', type: :feature do
     click_on 'Update Event'
     visit events_path
     expect(page).to have_content('')
+
+    visit events_path
+    click_on 'Logout'
   end
 end

@@ -30,9 +30,20 @@ RSpec.describe 'Creating an event', type: :feature do
     visit events_path
     sleep(2)
     expect(page).to have_content('New Event')
-  end
 
+    visit events_path
+    click_on 'Logout'
+
+  end
+  sleep(10)
   scenario 'valid inputs' do
+    visit 'login/index'
+    within('form') do
+      fill_in 'LoginAttempt_username', with: 'cat'
+      fill_in 'LoginAttempt_password', with: 'dog'
+    end
+    click_on 'Submit'
+
     visit new_event_path
     fill_in 'event[name]', with: ''
     fill_in 'event[description]', with: 'Fun'
@@ -45,5 +56,9 @@ RSpec.describe 'Creating an event', type: :feature do
     fill_in 'event[link]', with: 'http://tamu.zoom.us/'
     visit events_path
     expect(page).to have_content('') #-----need to figure out how to fix flash
+
+    visit events_path
+    click_on 'Logout'
+
   end
 end
