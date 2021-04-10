@@ -29,7 +29,7 @@ RSpec.describe 'Updating a event', type: :feature do
     select 'April', from: 'event_date_2i'
     select '5', from: 'event_date_3i'
     click_on 'Update Event'
-    visit events_path
+#     visit events_path
     expect(page).to have_content('New Party')
 
     visit events_path
@@ -57,7 +57,7 @@ RSpec.describe 'Updating a event', type: :feature do
     select 'June', from: 'event_date_2i'
     select '10', from: 'event_date_3i'
     click_on 'Update Event'
-    visit events_path
+#     visit events_path
     expect(page).to have_content('')
 
     visit events_path
