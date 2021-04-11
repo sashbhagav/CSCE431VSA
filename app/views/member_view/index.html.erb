@@ -1,9 +1,9 @@
 <style type="text/css">
-  body {background-image: url(/assets/EventViewFinal.png); background-size:1920px 950px;}
+  body {background-image: url(/assets/EventViewFinal2.png); background-size:1920px 950px;}
   #container{width:1900px; margin-right:auto; margin-left:auto}
-  .form-buttons{padding-left:23px}
+  .form-buttons{text-align:center; padding-left: 50px}
   .events_index{text-align:center}
-  #listing{padding-left: 730px}
+  #listing{padding-left: 630px}
   .Logos{text-align:center; margin: 5px 5px 5px 5px}
   .media{text-align:center}
   #table_table_hover{padding-left: 870px}
@@ -40,10 +40,10 @@
           <td><%= event.name %></td>
           <td><%= event.description %></td>
           <td><%= event.location %></td>
-          <td><%= event&.date&.strftime('%B %e, %Y') %></td>
+          
           <td><%= event.time %></td>
           <td><%= event.points %></td>
-          <td><%= event.link %></td>
+          
             <td class="actions">
             <%= link_to("Details", event_path(event), :class => 'action show') %>
           </td>

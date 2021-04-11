@@ -1,12 +1,12 @@
 <style type="text/css">
-  body {background-image: url(/assets/EventViewFinal.png); background-size:1920px 950px;}
+  body {background-image: url(/assets/EventViewFinal2.png); background-size:1920px 950px;}
   #container{width:1900px; margin-right:auto; margin-left:auto}
   .EventsButtons{padding-left: 50px; text-align:center}
   #newevent, #newhousehold, #logout {display:inline-block;}
   .events_index{text-align:center}
-  #listing{padding-left: 670px}
+  #listing{padding-left: 550px}
   .media{text-align:center}
-  #table_table_hover{padding-left: 600px}
+  #table_table_hover{padding-left: 510px}
   .PieChart{text-align:center}
 </style>
 <br />
@@ -50,10 +50,10 @@
         <td><%= event.name %></td>
         <td><%= event.description %></td>
         <td><%= event.location %></td>
-        <td><%= event&.date&.strftime('%B %e, %Y') %></td>
+        
         <td><%= event.time %></td>
         <td><%= event.points %></td>
-        <td><%= event.link %></td>
+        
           <td class="actions">
           <%= link_to("Details", event_path(event), :class => 'action show') %>
           <%= link_to("Update", edit_event_path(event), :class => 'action edit') %>
