@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe 'Deleting a household ', type: :feature do
   scenario 'success' do
     visit 'login/index'
-    sleep(1)
+#     sleep(1)
     within('form') do
       fill_in 'LoginAttempt_username', with: 'cat'
       fill_in 'LoginAttempt_password', with: 'dog'
@@ -19,7 +19,7 @@ RSpec.describe 'Deleting a household ', type: :feature do
     click_on 'Destroy'
     sleep(5)
     expect(page).to have_content('Delete')
-    click_on 'Delete event'
+    click_on 'Delete member'
     sleep(5)
     expect(page).not_to have_content('David')
 
