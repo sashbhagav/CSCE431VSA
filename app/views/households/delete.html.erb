@@ -9,11 +9,9 @@
 <div id = "container">
   <div class= "event_form" summary="event form">
     <br />
-    <div class="events delete">
       <h2>Delete event</h2>
       <%= form_for(@household, method: :delete) do |f| %>
       <p>You sure you want to delete the member?</p>
-    </div>
       
     <div class="form-buttons">
       <%= f.submit("Delete member") %>
