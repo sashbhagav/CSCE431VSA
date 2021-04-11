@@ -2,6 +2,7 @@
 <html>
 <style> 
   body {background-image: url(/assets/LoginPage.png); background-size:1920px 950px;}
+  #container{width:1920px; margin-right:auto; margin-left:auto}
   .LoginLogo{padding-left:215px}
   .LoginTitle{padding-left:375px; align:center}
   .LoginCreds{padding-left:330px; align:center}
@@ -9,10 +10,11 @@
 </style>
 
 <body background-image> 
+<div id = "container">
   <div class="Adminview">
     <div class="LoginLogo"> <%= image_tag ("vsa.png") %></div>
     <div class="LoginTitle"> <h1>Admin Login</h1> </div>
-    <div class="LoginCreds" >      
+    <div class="LoginCreds">      
       <%= form_for(:LoginAttempt) do |f| %>
         Username: <%= f.text_field (:username) %><br />
         Password: <%= f.password_field :password %><br/> 

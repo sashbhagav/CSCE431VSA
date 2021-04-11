@@ -1,63 +1,78 @@
 <p id="notice"><%= notice %></p>
-<%= link_to("<< Back to Home", events_path, :class => 'back-link') %>
-<h1>Households</h1>
+<style type="text/css">
+body {background-image: url(/assets/HouseholdT2.png); background-size:1920px 950px;}
+#container{width:1900px; margin-right:auto; margin-left:auto}
+.title{text-align:center}
+.formbuttons{text-align:center}
+</style>
+<body>
+<div id = "container">
+  <%= link_to("<< Back to Home", events_path, :class => 'back-link') %>
+  <div class = "title">
+    <h1>Households</h1>
+  </div>
 
-<div>
   <div>
-    <table role="datatable">
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>First</th>
-          <th>Last</th>
-          <th>Uin</th>
-          <th>Family</th>
-          <th>Email</th>
-          <th>Phonenumber</th>
-          <th>Classification</th>
-          <th>Major</th>
-          <th>Points</th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @households.each do |household| %>
+    <div>
+      <table role="datatable">
+        <thead>
           <tr>
-            <td><%= household.id %></td>
-            <td><%= household.first %></td>
-            <td><%= household.last %></td>
-            <td><%= household.UIN %></td>
-            <td><%= household.family %></td>
-            <td><%= household.email %></td>
-            <td><%= household.phonenumber %></td>
-            <td><%= household.classification %></td>
-            <td><%= household.major %></td>
-            <td><%= household.points %></td>
-            <td><%= link_to 'Show', household %></td>
-            <td><%= link_to 'Edit', edit_household_path(household) %></td>
-            <td><%= link_to 'Destroy', delete_household_path(household) %></td>
+            <th>Id</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Uin</th>
+            <th>Family</th>
+            <th>Email</th>
+            <th>Phonenumber</th>
+            <th>Classification</th>
+            <th>Major</th>
+            <th>Points</th>
+            <th></th>
+            <th></th>
+            <th></th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody>
+          <% @households.each do |household| %>
+            <tr>
+              <td><%= household.id %></td>
+              <td><%= household.first %></td>
+              <td><%= household.last %></td>
+              <td><%= household.UIN %></td>
+              <td><%= household.family %></td>
+              <td><%= household.email %></td>
+              <td><%= household.phonenumber %></td>
+              <td><%= household.classification %></td>
+              <td><%= household.major %></td>
+              <td><%= household.points %></td>
+              <td><%= link_to 'Show', household %></td>
+              <td><%= link_to 'Edit', edit_household_path(household) %></td>
+              <td><%= link_to 'Destroy', delete_household_path(household) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <br />
+  <div class="formbuttons">
+    <h3>Import household</h3>
+    <%= form_tag import_households_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Upload Households"%>
+    <% end %>
+
+    <%= link_to 'New Household', new_household_path %>
+
+    <h3>Import Points</h3>
+    
+    <%= form_tag households_import2_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "Upload Points"%>
+    <% end %>
   </div>
 </div>
-
-
-<br>
-<h3>Import household</h3>
-<%= form_tag import_households_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Upload Households"%>
-<% end %>
-
-<%= link_to 'New Household', new_household_path %>
-
-<h3>Import Points</h3>
-<%= form_tag households_import2_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Upload Points"%>
-<% end %>
+</body>

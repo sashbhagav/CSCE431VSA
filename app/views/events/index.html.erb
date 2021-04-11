@@ -1,15 +1,32 @@
 <style type="text/css">
-  body {background-image: url(/assets/EventView.png); background-size:1920px 950px;}
-  .events_index{padding-left: 85px; text-align:center}
-  .listing{padding-left: 725px}
-  .media{padding-left: 80px; text-align:center}
-  .table_table_hover{padding-left: 820px}
+  body {background-image: url(/assets/EventViewFinal.png); background-size:1920px 950px;}
+  #container{width:1900px; margin-right:auto; margin-left:auto}
+  .EventsButtons{padding-left: 50px; text-align:center}
+  #newevent, #newhousehold, #logout {display:inline-block;}
+  .events_index{text-align:center}
+  #listing{padding-left: 670px}
+  .media{text-align:center}
+  #table_table_hover{padding-left: 600px}
   .PieChart{text-align:center}
-  .EventsButtons{padding-left: 75px; text-align:center}
 </style>
-
+<br />
+<div class="EventsButtons">
+      <div class = "form-buttons" text-align = "right" id = "newevent">
+        <%= button_to("Add a new event", { :action => "new" }, :method => :get, :class => 'action new') %>
+      </div>
+      <div class = "form-buttons" text-align = "right" id = "newhousehold">
+        <%= button_to("Add a new household", households_path, :method => :get) %>
+      </div>
+      <div class = "form-buttons" text-align = "right" id ="logout">
+        <%= button_to("Logout", { :action => "logout" }, :method => :get, :class => 'login new') %>
+      </div>
+      <% flash.each do |key, value| %>
+        <td><%= value%> </td>
+      <%end%>
+</div>
 
 <body>
+<div id = "container">
   <%= stylesheet_link_tag "table" %>
     <%= javascript_include_tag 'test' %>
   <div class= "events_index">
@@ -18,7 +35,7 @@
     <p>View all the Events in our club</p>
   </div>
 
-      <table class ="table">
+      <table class ="table" id = "listing">
         <tr class="header">
           <th>Events</th>
           <th>Description</th>
@@ -51,7 +68,7 @@
       <div class="media">
         <h2>VSA Points</h2>
         <div class="media-body">
-          <table role="datatable" class="table">
+          <table role="datatable" class="table" id = "table_table_hover">
             <thead>
               <tr>
                 <th>First</th>
@@ -98,18 +115,5 @@
 <br />
 <br />
 
-    <div class="EventsButtons">
-      <div class = "form-buttons">
-        <%= button_to("Logout", { :action => "logout" }, :method => :get, :class => 'login new') %>
-      </div>
-      <div class = "form-buttons">
-        <%= button_to("Add a new event", { :action => "new" }, :method => :get, :class => 'action new') %>
-      </div>
-      <div class = "form-buttons">
-        <%= button_to("Add a new household", households_path, :method => :get) %>
-      </div>
-      <% flash.each do |key, value| %>
-        <td><%= value%> </td>
-      <%end%>
-  </div>
+</div>
 </body>
