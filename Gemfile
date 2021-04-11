@@ -12,7 +12,7 @@ gem 'pg', '~> 1.1'
 
 gem 'chartkick'
 
-gem 'simplecov', :require => false, :group => :test
+gem 'simplecov', require: false, group: :test
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
@@ -36,11 +36,11 @@ gem 'active_record_fix_integer_limit'
 gem 'bootsnap', '>= 1.4.4', require: false
 # RuboCop
 gem 'rubocop', require: false
-#brakeman
+# brakeman
 gem 'brakeman'
-gem 'rails-assets-jquery', source: 'https://rails-assets.org'
-gem 'rails-assets-datatables', source: 'https://rails-assets.org'
 gem 'kaminari'
+gem 'rails-assets-datatables', source: 'https://rails-assets.org'
+gem 'rails-assets-jquery', source: 'https://rails-assets.org'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do

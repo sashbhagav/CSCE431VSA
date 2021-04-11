@@ -14,7 +14,7 @@ RSpec.describe 'Creating an event', type: :feature do
     click_on 'Submit'
     # sleep (5)
     expect(page).to have_content('VSA Events')
-#     sleep(2)
+    #     sleep(2)
     visit new_event_path
     fill_in 'event[name]', with: 'New Event'
     fill_in 'event[description]', with: 'Fun'
@@ -28,15 +28,14 @@ RSpec.describe 'Creating an event', type: :feature do
 
     click_on 'Add Event'
     visit events_path
-#     sleep(2)
+    #     sleep(2)
     page.execute_script('window.scrollTo(0,100000)')
     expect(page).to have_content('New Event')
 
     visit events_path
     click_on 'Logout'
-
   end
-#   sleep(10)
+  #   sleep(10)
   scenario 'valid inputs' do
     visit 'login/index'
     within('form') do
@@ -60,6 +59,5 @@ RSpec.describe 'Creating an event', type: :feature do
 
     visit events_path
     click_on 'Logout'
-
   end
 end

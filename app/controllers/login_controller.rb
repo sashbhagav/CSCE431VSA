@@ -4,32 +4,32 @@ class LoginController < ApplicationController
   layout false
   require 'events_controller'
 
-#  def index
-#    @login_attempt = LoginAttempt.all
-#  end
+  #  def index
+  #    @login_attempt = LoginAttempt.all
+  #  end
 
-#  def new
-#    @login_attempt = LoginAttempt.new
-#  end
+  #  def new
+  #    @login_attempt = LoginAttempt.new
+  #  end
 
-#  def edit
-#    @login_attempt = LoginAttempt.find(params[:id])
-#  end
+  #  def edit
+  #    @login_attempt = LoginAttempt.find(params[:id])
+  #  end
 
-#  def create
-#    @login_attempt = LoginAttempt.new(
-#      username: params[:LoginAttempt][:username],
-#      password: params[:LoginAttempt][:password]
-#    )
-#    @login_attempt.save
-#  end
+  #  def create
+  #    @login_attempt = LoginAttempt.new(
+  #      username: params[:LoginAttempt][:username],
+  #      password: params[:LoginAttempt][:password]
+  #    )
+  #    @login_attempt.save
+  #  end
 
   def validate
-    #validate action
+    # validate action
     @login_attempt = LoginAttempt.new(login_attempt_params)
-    #puts "------HERE-------" + @login_attempt.username
-    @username = "cat"
-    @password = "dog"
+    # puts "------HERE-------" + @login_attempt.username
+    @username = 'cat'
+    @password = 'dog'
     # puts "-------------"
     # puts @login_attempt.password
     # puts "-------------"
@@ -45,12 +45,10 @@ class LoginController < ApplicationController
     # render('login')
   end
 
-
-#  def adminView
-#
-#    #render('adminView')
-#  end
-
+  #  def adminView
+  #
+  #    #render('adminView')
+  #  end
 
   private
 

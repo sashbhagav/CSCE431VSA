@@ -4,14 +4,13 @@ class EventsController < ApplicationController
   layout false
   $adminBOOLEAN = 0
 
-
   def index
     @households = Household.all
     @events = Event.order('name ASC')
-    if($adminBOOLEAN == 1)
-        render('index')
+    if $adminBOOLEAN == 1
+      render('index')
     else
-        redirect_to(controller: 'member_view', action: 'index')
+      redirect_to(controller: 'member_view', action: 'index')
     end
   end
 
@@ -21,26 +20,26 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
-    if($adminBOOLEAN == 1)
-        render('new')
+    if $adminBOOLEAN == 1
+      render('new')
     else
-        redirect_to(controller: 'member_view', action: 'index')
+      redirect_to(controller: 'member_view', action: 'index')
     end
   end
 
   def create
     @event = Event.new(event_params)
     @event.save
-    flash[:added] = 'you have added '  + @event.name
+    flash[:added] = "you have added #{@event.name}"
     redirect_to(events_path)
   end
 
   def edit
     @event = Event.find(params[:id])
-    if($adminBOOLEAN == 1)
-        render('edit')
+    if $adminBOOLEAN == 1
+      render('edit')
     else
-        redirect_to(controller: 'member_view', action: 'index')
+      redirect_to(controller: 'member_view', action: 'index')
     end
   end
 
@@ -55,10 +54,10 @@ class EventsController < ApplicationController
 
   def delete
     @event = Event.find(params[:id])
-    if($adminBOOLEAN == 1)
-        render('delete')
+    if $adminBOOLEAN == 1
+      render('delete')
     else
-        redirect_to(controller: 'member_view', action: 'index')
+      redirect_to(controller: 'member_view', action: 'index')
     end
   end
 
@@ -73,9 +72,9 @@ class EventsController < ApplicationController
   end
 
   def logout
-      $adminBOOLEAN = 0
-      redirect_to(controller: 'member_view', action: 'index')
-    end
+    $adminBOOLEAN = 0
+    redirect_to(controller: 'member_view', action: 'index')
+  end
 
   private
 
