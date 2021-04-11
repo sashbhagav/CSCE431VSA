@@ -1,5 +1,21 @@
-<h1>New Member</h1>
+<style type="text/css">
+   body {background-image: url(/assets/Event.png); background-size:1920px 950px;}
+   #container{width:1920px; margin-right:auto; margin-left:auto}
+  .event_show{padding-left: 120px; padding-top:100px; font-size:55px}
+  .event_form{padding-left: 75px; padding-top:0px; font-size:25px}
+  .form-buttons{padding-left: 275px; padding-top:50px;}
+</style>
 
-<%= render 'form', household: @household %>
-
-<%= link_to 'Back', households_path %>
+<body>
+<div id = "container">
+    <div class="event_show">
+        <h3>New Household</h3>
+        <div class= "event_form" summary="event form">
+            <%= render 'form', household: @household %>
+        </div>
+        <div class = "form-buttons">
+            <%= link_to 'Back', households_path %>
+        </div>
+    </div>
+</div>
+</body>

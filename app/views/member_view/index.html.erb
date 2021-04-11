@@ -1,56 +1,61 @@
 <style type="text/css">
-  body {background-image: url(/assets/EventView.png); background-size:1920px 950px;}
-  .events_index{padding-left: 80px; text-align:center}
-  .listing{padding-left: 685px}
-  .Logos{text-align:center; padding-left: 65px; margin: 5px 5px 5px 5px}
-  .media{padding-left: 80px; text-align:center}
-  .table_table_hover{padding-left: 820px}
-  .PieChart{text-align:center}
+  body {background-image: url(/assets/EventViewFinal3.png); background-size:1920px 950px;}
+  #container{width:1900px; margin-right:auto; margin-left:auto}
+  .form-buttons{text-align:center; padding-left: 50px}
+  .events_index{text-align:center}
+  #listing{padding-left: 630px}
+  .Logos{text-align:center; margin: 5px 5px 5px 5px}
+  .media{text-align:center}
+  #table_table_hover{padding-left: 870px}
+  .PieChart{text-align:center}  
 </style>
-<br />
-<div class = "form-buttons" text-align = "right">
-  <%= button_to("Administrator Login", { :action => "login" }, :method => :get, :class => 'login new') %>
-</div>
+
 <body>
+  <br />
+  <div class = "form-buttons" text-align = "right">
+    <%= button_to("Administrator Login", { :action => "login" }, :method => :get, :class => 'login new') %>
+  </div>
+
+  <div id = "container" class = "banner-area">
   <%= stylesheet_link_tag "table" %>
   <%= javascript_include_tag 'test' %>
-      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-<div class= "events_index">
-  <%= image_tag ("vsa.png") %>
-  <h2>VSA Events</h2>
-  <p>View all of the Events in our club</p>
-    <table class="table">
-      <tr class="header">
-        <th>Events</th>
-        <th>Description</th>
-        <th>Location</th>
-        <th> Date </th>
-        <th>Time</th>
-        <th>Points</th>
-        <th>Link</th>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <div class= "events_index">
+    <%= image_tag ("vsa.png") %>
+    <h2>VSA Events</h2>
+    <p>View all of the Events in our club</p>
+      <table class="table" id = "listing">
+        <tr class="header">
+          <th>Events</th>
+          <th>Description</th>
+          <th>Location</th>
+          <th> Date </th>
+          <th>Time</th>
+          <th>Points</th>
+          <th>Link</th>
 
-      </tr>
-      <% @events.each do |event| %>
-      <tr>
-        <td><%= event.name %></td>
-        <td><%= event.description %></td>
-        <td><%= event.location %></td>
-        <td><%= event&.date&.strftime('%B %e, %Y') %></td>
-        <td><%= event.time %></td>
-        <td><%= event.points %></td>
-        <td><%= event.link %></td>
-          <td class="actions">
-          <%= link_to("Details", event_path(event), :class => 'action show') %>
-        </td>
-      </tr>
-      <% end %>
-    </table>
+        </tr>
+        <% @events.each do |event| %>
+        <tr>
+          <td><%= event.name %></td>
+          <td><%= event.description %></td>
+          <td><%= event.location %></td>
+          <td><%= event&.date&.strftime('%B %e, %Y') %></td>
+          <td><%= event.time %></td>
+          <td><%= event.points %></td>
+          <td><%= event.link %></td>
+            <td class="actions">
+            <%= link_to("Details", event_path(event), :class => 'action show') %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
   </div>
 
   <div class="media">
   <h2>VSA Points</h2>
     <div class="media-body">
-      <table role="datatable">
+      <table role="datatable" id = "table_table_hover">
         <thead>
           <tr>
             <th>First</th>
@@ -88,5 +93,5 @@
   </div>
 
   <br />
-
+</div>
 </body>

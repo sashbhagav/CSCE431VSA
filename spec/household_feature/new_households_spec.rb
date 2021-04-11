@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe 'new household ', type: :feature do
   scenario 'creating new household' do
     visit 'login/index'
-    sleep(1)
+    # sleep(1)
     within('form') do
       fill_in 'LoginAttempt_username', with: 'cat'
       fill_in 'LoginAttempt_password', with: 'dog'
@@ -15,7 +15,7 @@ RSpec.describe 'new household ', type: :feature do
     visit households_path
     # expect(page).to have_content('David')
     click_on 'New Household'
-    sleep(5)
+    # sleep(5)
     fill_in 'household[first]', with: 'Goose'
     fill_in 'household[last]', with: 'loose'
     fill_in 'household[UIN]', with: '325687296'
@@ -25,14 +25,14 @@ RSpec.describe 'new household ', type: :feature do
     fill_in 'household[classification]', with: 'U4'
     fill_in 'household[major]', with: 'CECN'
     click_on 'Create Household'
-    sleep(5)
+    # sleep(5)
     expect(page).to have_content('Goose')
     click_on 'Back'
-    sleep(5)
+    # sleep(5)
     expect(page).to have_content('Goose')
 
     click_on 'New Household'
-    sleep(5)
+    # sleep(5)
     fill_in 'household[first]', with: 'David'
     fill_in 'household[last]', with: 'Ortega'
     fill_in 'household[UIN]', with: '325687296'
@@ -42,10 +42,10 @@ RSpec.describe 'new household ', type: :feature do
     fill_in 'household[classification]', with: 'U4'
     fill_in 'household[major]', with: 'CECN'
     click_on 'Create Household'
-    sleep(5)
+    # sleep(5)
     expect(page).to have_content('errors')
     click_on 'Back'
-    sleep(5)
+    # sleep(5)
 
     visit events_path
     click_on 'Logout'
