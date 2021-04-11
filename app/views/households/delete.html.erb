@@ -6,10 +6,11 @@
   .form-buttons{padding-left: 275px; padding-top:50px;}
 </style>
 <body>
+
 <div id = "container">
   <div class= "event_form" summary="event form">
     <br />
-      <h2>Delete event</h2>
+      <h2>Delete member</h2>
       <%= form_for(@household, method: :delete) do |f| %>
       <p>You sure you want to delete the member?</p>
       
@@ -21,4 +22,6 @@
     <% end %>
   </div>
 </div>
+</div>
 </body>
+
