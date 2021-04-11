@@ -11,7 +11,7 @@ RSpec.describe 'Delete event', type: :feature do
   end
   scenario 'success household' do
     house = Household.create!(first: 'David', last: 'Ortega', UIN: '326039485', family: 'Goose',
-                      email: 'davidortega1212@gmail.com', phonenumber: '9565218292', classification: 'U4', major: 'CECN')
+                              email: 'davidortega1212@gmail.com', phonenumber: '9565218292', classification: 'U4', major: 'CECN')
 
     visit delete_household_path(id: house.id)
     expect(page).to have_button('Administrator Login')

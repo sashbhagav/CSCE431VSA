@@ -15,8 +15,6 @@ class MemberViewController < ApplicationController
     redirect_to(controller: 'login', action: 'index')
   end
 
-  private
-
   # def event_params
   #   params.require(:event).permit(:name, :description, :location, :time, :points)
   # end

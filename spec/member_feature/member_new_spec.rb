@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 require 'rails_helper'
@@ -14,4 +13,3 @@ RSpec.describe 'new', type: :feature do
     expect(page).to have_button('Administrator Login')
   end
 end
-
