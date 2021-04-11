@@ -34,6 +34,7 @@ RSpec.describe 'Creating an event', type: :feature do
 
     visit events_path
     click_on 'Logout'
+    expect(page).to have_content('New Event')
   end
   #   sleep(10)
   scenario 'valid inputs' do

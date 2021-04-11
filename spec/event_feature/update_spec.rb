@@ -12,7 +12,7 @@ RSpec.describe 'Updating a event', type: :feature do
     end
 
     click_on 'Submit'
-    sleep(5)
+    # sleep(5)
     expect(page).to have_content('VSA Events')
 
     event = Event.create!(name: 'Test Event', description: 'Test description', location: 'Houston', time: '3:30 PM',
@@ -41,7 +41,7 @@ RSpec.describe 'Updating a event', type: :feature do
     end
 
     click_on 'Submit'
-    sleep(5)
+    # sleep(5)
     expect(page).to have_content('VSA Events')
 
     event = Event.create!(name: 'Party', description: 'Test description', location: 'Houston', time: '3:30 PM',
