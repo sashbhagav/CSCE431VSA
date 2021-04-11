@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 class MemberViewController < ApplicationController
   layout false
   def index
-      @households = Household.all
-      @events = Event.order('name ASC')
+    @households = Household.all
+    @events = Event.order('name ASC')
   end
 
   def show
-      @event = Event.find(params[:id])
+    @event = Event.find(params[:id])
   end
 
   def login
@@ -15,7 +17,7 @@ class MemberViewController < ApplicationController
 
   private
 
-      def event_params
-        params.require(:event).permit(:name, :description, :location, :time, :points)
-      end
+  def event_params
+    params.require(:event).permit(:name, :description, :location, :time, :points)
+  end
 end
