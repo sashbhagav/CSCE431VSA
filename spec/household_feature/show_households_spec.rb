@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe 'Show a household ', type: :feature do
   scenario 'success' do
     visit 'login/index'
-    sleep(1)
+    # sleep(1)
     within('form') do
       fill_in 'LoginAttempt_username', with: 'cat'
       fill_in 'LoginAttempt_password', with: 'dog'
@@ -17,10 +17,10 @@ RSpec.describe 'Show a household ', type: :feature do
     visit households_path
     expect(page).to have_content('David')
     click_on 'Show'
-    sleep(5)
+    # sleep(5)
     expect(page).to have_content('David')
     click_on 'Back'
-    sleep(5)
+    # sleep(5)
     expect(page).to have_content('Households')
 
     visit events_path

@@ -7,9 +7,9 @@ class MemberViewController < ApplicationController
     @events = Event.order('name ASC')
   end
 
-  def show
-    @event = Event.find(params[:id])
-  end
+  # def show
+  #   @event = Event.find(params[:id])
+  # end
 
   def login
     redirect_to(controller: 'login', action: 'index')
@@ -17,7 +17,7 @@ class MemberViewController < ApplicationController
 
   private
 
-  def event_params
-    params.require(:event).permit(:name, :description, :location, :time, :points)
-  end
+  # def event_params
+  #   params.require(:event).permit(:name, :description, :location, :time, :points)
+  # end
 end
