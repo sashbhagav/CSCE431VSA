@@ -1,3 +1,3 @@
 # VSA Member Tracker Application
 
-URL: vsatracker.herokuapp.com
+url: vsatracker.herokuapp.com
