@@ -1,8 +1,9 @@
-
-table{
+.table{
    overflow-y:scroll;
    height:175px;
    display:block;
+   margin-left:70vh;
+   margin-right:60vh;
 }
 .center {
   margin-left:70vh;

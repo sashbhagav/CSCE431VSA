@@ -1,7 +1,3 @@
 id,first,last,UIN,family,email,phonenumber,classification,major,points
-1,Goose,pond,326003456,tiger,goose@gmail.com,9793456754,U5,CEEN,1
-2,Duck,lake,326004236,bird,duck@gmail.com,2173000058,U6,CEEN,2
-3,Fish,river,326005016,small fish,fish@gmail.com,1025003362,U7,CEEN,3
-4,Shark,ocean,326005796,big fish,shark@gmail.com,1047827666,U8,CEEN,4
-5,Lion,saharah,326006576,king,lion@gmail.com,1070649970,U9,CEEN,5
-6,David,Ortega,326002676,Goose,Davidortega1001@gmail.com,9565183450,U4,CEEN ,10
+8,Goose,pond,326003456,tiger,goose@gmail.com,9793456754,U5,CEEN,1
+7,David,Ortega,326002676,Goose,Davidortega1001@gmail.com,9565183450,U4,CEEN ,10
