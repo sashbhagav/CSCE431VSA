@@ -77,8 +77,8 @@ RSpec.describe 'Deleting a household ', type: :feature do
     visit 'login/index'
     # sleep(1)
     within('form') do
-      fill_in 'LoginAttempt_username', with: 'cat'
-      fill_in 'LoginAttempt_password', with: 'dog'
+      fill_in 'LoginAttempt_username', with: 'admin'
+      fill_in 'LoginAttempt_password', with: 'vsatracker'
     end
     click_on 'Submit'
     Household.create!(first: 'David', last: 'Ortega', UIN: '326039485', family: 'Goose',
