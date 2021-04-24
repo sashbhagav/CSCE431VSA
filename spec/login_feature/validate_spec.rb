@@ -15,8 +15,8 @@ RSpec.describe 'correct admin login attempt', type: :feature do
   scenario 'success' do
     visit 'login/index'
     within('form') do
-      fill_in 'LoginAttempt_username', with: 'cat'
-      fill_in 'LoginAttempt_password', with: 'dog'
+      fill_in 'LoginAttempt_username', with: 'admin'
+      fill_in 'LoginAttempt_password', with: 'vsatracker'
     end
 
     click_on 'Submit'

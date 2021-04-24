@@ -28,8 +28,8 @@ class LoginController < ApplicationController
     # validate action
     @login_attempt = LoginAttempt.new(login_attempt_params)
     # puts "------HERE-------" + @login_attempt.username
-    @username = 'cat'
-    @password = 'dog'
+    @username = 'admin'
+    @password = 'vsatracker'
     # puts "-------------"
     # puts @login_attempt.password
     # puts "-------------"
