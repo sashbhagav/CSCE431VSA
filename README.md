@@ -8,8 +8,9 @@ URL: https://vsatracker.herokuapp.com
 ## Running the app locally on your computer
 ### 1. First create the database locally using db:create
 ### 2. rails db:migrate 
-### 3. Change the username and passowrd in config/database.yml
-### 4. rails s
+### 3. Change the username and password in config/database.yml
+### 4. Run Bundle Install
+### 5. rails s
 
 ## Deploy the code in Heroku
 ### 1. First through the CI/CD process, if anything is merged into master the app will be deployed in Heroku. 
