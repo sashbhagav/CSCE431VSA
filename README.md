@@ -15,6 +15,15 @@ URL: https://vsatracker.herokuapp.com
 ## Deploy the code in Heroku
 ### 1. First through the CI/CD process, if anything is merged into master the app will be deployed in Heroku. 
 
+## Manual Deployment of Code in Heroku
+### 1. heroku git:remote -a "app"
+### 2. heroku login
+### 3. git init
+### 4. git add .
+### 5. git commit -m "message"
+### 6. git push heroku master
+### 7. heroku run rake db:migrate
+
 ## CI/CD Process
 ### 1. The CI/CD code is in .github/workflows/main.yml
 ### 2. The "test" portion runs all the rspec tests
